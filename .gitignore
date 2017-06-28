@@ -1,0 +1,4 @@
+#IGNORE
+
+node_modules
+rethinkdb_data
