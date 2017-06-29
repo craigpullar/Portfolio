@@ -8,13 +8,13 @@ server.connection({
     port: 8000 
 });
 
-r = require('rethinkdb');
+// r = require('rethinkdb');
 
-var connection = null;
-r.connect( {host: 'localhost', port: 28015, password:''}, function(err, conn) {
-    if (err) console.log(err);
-    connection = conn;
-});
+// var connection = null;
+// r.connect( {host: 'localhost', port: 28015, password:''}, function(err, conn) {
+//     if (err) console.log(err);
+//     connection = conn;
+// });
 
 /* Register plugins */
 server.register(require('vision'), (err) => {

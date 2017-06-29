@@ -1,9 +1,16 @@
 /* main */
+@import "bootstrap";
 @import 'globals';
 @import 'mixins';
 @import 'partials';
 @import 'layout_default';
 @import 'view_index';
 
-
-
+.container-fluid,footer {
+	padding:20px 50px;
+	.row {
+		max-width:1024px;
+		margin:0px auto;
+		display:block;
+	}
+}
