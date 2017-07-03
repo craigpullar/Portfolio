@@ -1,1 +1,41 @@
 /* Layout: Default */
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight:300;
+	color:#333333;
+
+	h1 {
+		font-size:3.9rem;
+	}
+	h2 {
+		font-size:3.9rem;
+		margin:30px 0px 30px 0px;
+	}
+	h3 {
+
+	}
+	p,li {
+		font-size:2.2rem;
+	}
+
+	.container-fluid,footer {
+		padding:50px 20px;
+		.row {
+			max-width:1024px;
+			margin:0px auto;
+			display:block;
+			position:relative;
+		}
+
+		.btn {
+			background:#3498DB;
+			padding:15px 30px;
+			color:#fff;
+			border-radius:100px;
+			font-size:2.2rem;
+			font-weight:300;
+			margin:30px 0px;
+		}
+
+	}
+}

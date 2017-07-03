@@ -67,9 +67,16 @@ var routes = [
 },
 {
     method : 'GET',
-    path: '/css/deploy.css',
+    path: '/css/{filename}',
     handler:function(request, reply) {
-        reply.file('./client/css/deploy.css');
+        reply.file(`./client/css/${request.params.filename}`);
+    }
+},
+{
+    method: 'GET',
+    path: '/images/{filename}',
+    handler:function(request, reply) {
+       reply.file(`./client/images/${request.params.filename}`);
     }
 }
 ];

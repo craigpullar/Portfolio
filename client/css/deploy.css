@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* main */
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -5819,15 +5820,158 @@ button.close {
 /* Mixins */
 /* Partials */
 /* Layout: Default */
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #333333; }
+  body h1 {
+    font-size: 3.9rem; }
+  body h2 {
+    font-size: 3.9rem;
+    margin: 30px 0px 30px 0px; }
+  body p, body li {
+    font-size: 2.2rem; }
+  body .container-fluid, body footer {
+    padding: 50px 20px; }
+    body .container-fluid .row, body footer .row {
+      max-width: 1024px;
+      margin: 0px auto;
+      display: block;
+      position: relative; }
+    body .container-fluid .btn, body footer .btn {
+      background: #3498DB;
+      padding: 15px 30px;
+      color: #fff;
+      border-radius: 100px;
+      font-size: 2.2rem;
+      font-weight: 300;
+      margin: 30px 0px; }
+
 /* View : Index */
 #root {
   color: green; }
 
-.container-fluid, footer {
-  padding: 20px 50px; }
-  .container-fluid .row, footer .row {
-    max-width: 1024px;
-    margin: 0px auto;
-    display: block; }
+.container-fluid.dark-blue {
+  background: #2C3E50;
+  color: #fff;
+  min-height: 300px;
+  padding: 10px; }
+
+.container-fluid.light-grey {
+  background: #F8F8F8; }
+
+nav {
+  text-align: left; }
+  nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 5px 0px 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin: 0px 15px; }
+    nav li:hover {
+      border-bottom: 2px solid #fff; }
+    nav li.logo:hover {
+      border-bottom: 2px solid transparent; }
+
+.intro .profile {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin: 0px auto;
+  display: block;
+  position: relative;
+  margin-top: -210px;
+  background: url("./../images/profile.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/profile.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/profile.jpg', sizingMethod='scale')"; }
+
+.intro .btn.cta {
+  position: absolute;
+  right: 0px;
+  top: -110px;
+  background: #E74C3C;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
+
+.work .site {
+  margin: 20px auto; }
+  .work .site .view {
+    background: #D8D8D8;
+    border: 1px solid #979797;
+    width: 300px;
+    height: 300px;
+    margin: 0px auto; }
+
+.experience {
+  padding-bottom: 100px; }
+  .experience .poe {
+    margin-top: 30px; }
+    .experience .poe span.title {
+      font-size: 6rem;
+      color: #fff;
+      font-weight: 700;
+      overflow: visible;
+      -webkit-text-stroke: 3px #9B59B6;
+      -webkit-text-fill-color: #ffffff;
+      background: -moz-linear-gradient(left, #fff, #9B59B6);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#9B59B6'); }
+
+.form {
+  background: url("./../images/form-bg.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/form-bg.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/form-bg.jpg', sizingMethod='scale')"; }
+  .form .col-sm-12 {
+    margin-top: -50px;
+    background: #fff;
+    padding: 50px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
+    .form .col-sm-12 h2 {
+      margin-bottom: 50px; }
+  .form .col-sm-6 {
+    position: relative; }
+    .form .col-sm-6 .middle {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 20px; }
+  .form form input, .form form textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #CCCCCC;
+    font-size: 2.2rem;
+    margin: 5px 0px;
+    padding: 10px; }
+    .form form input::-webkit-input-placeholder, .form form textarea::-webkit-input-placeholder {
+      color: #CCCCCC;
+      font-size: 1.5rem; }
+    .form form input:-moz-placeholder, .form form textarea:-moz-placeholder {
+      color: #CCCCCC;
+      font-size: 1.5rem; }
+    .form form input::-moz-placeholder, .form form textarea::-moz-placeholder {
+      color: #CCCCCC;
+      font-size: 1.5rem; }
+    .form form input:-ms-input-placeholder, .form form textarea:-ms-input-placeholder {
+      color: #CCCCCC;
+      font-size: 1.5rem; }
+  .form form input {
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 20px; }
+  .form form textarea {
+    resize: none; }
+  .form .cta img {
+    height: 26px;
+    position: relative;
+    top: -3px;
+    margin-left: 10px; }
 
 /*# sourceMappingURL=deploy.css.map */
