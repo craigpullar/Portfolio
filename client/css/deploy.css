@@ -5957,7 +5957,7 @@ nav {
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/destination-races-desktop.png', sizingMethod='scale')"; }
 
 .experience {
-  padding-bottom: 100px; }
+  padding-bottom: 150px !important; }
   .experience .poe {
     margin-top: 30px; }
     .experience .poe span.title {
@@ -5979,7 +5979,7 @@ nav {
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/form-bg.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/form-bg.jpg', sizingMethod='scale')"; }
   .form .col-sm-12 {
-    margin-top: -50px;
+    margin-top: -80px;
     background: #fff;
     padding: 50px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
