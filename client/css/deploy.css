@@ -5902,10 +5902,59 @@ nav {
   margin: 20px auto; }
   .work .site .view {
     background: #D8D8D8;
-    border: 1px solid #979797;
+    border: 1px solid #ccc;
     width: 300px;
     height: 300px;
-    margin: 0px auto; }
+    margin: 0px auto;
+    cursor: pointer; }
+    .work .site .view.vacation-equation {
+      background: url("./../images/sites/vacation-equation-desktop.png") center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/vacation-equation-desktop.png', sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/vacation-equation-desktop.png', sizingMethod='scale')"; }
+    .work .site .view.arlanda {
+      background: url("./../images/sites/arlanda-desktop.png") center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/arlanda-desktop.png', sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/arlanda-desktop.png', sizingMethod='scale')"; }
+    .work .site .view.mmn {
+      background: url("./../images/sites/mmn-desktop.png") center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/mmn-desktop.png', sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/mmn-desktop.png', sizingMethod='scale')"; }
+    .work .site .view.monstermas {
+      background: url("./../images/sites/monstermas-desktop.png") center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/monstermas-desktop.png', sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/monstermas-desktop.png', sizingMethod='scale')"; }
+    .work .site .view.picsol {
+      background: url("./../images/sites/picsol-desktop.png") center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/picsol-desktop.png', sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/picsol-desktop.png', sizingMethod='scale')"; }
+    .work .site .view.destination-races {
+      background: url("./../images/sites/destination-races-desktop.png") center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/destination-races-desktop.png', sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/destination-races-desktop.png', sizingMethod='scale')"; }
 
 .experience {
   padding-bottom: 100px; }

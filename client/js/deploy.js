@@ -309,32 +309,56 @@ var MyWork = function (_React$Component) {
 				_react2.default.createElement(
 					'div',
 					{ className: 'col-sm-4 site' },
-					_react2.default.createElement('div', { className: 'view' })
+					_react2.default.createElement(
+						'a',
+						{ href: 'https://www.homeaway.com/lp/vacation-equation/', target: '_blank' },
+						_react2.default.createElement('div', { className: 'view vacation-equation' })
+					)
 				),
 				_react2.default.createElement(
 					'div',
-					{ className: 'col-sm-4 site' },
-					_react2.default.createElement('div', { className: 'view' })
+					{ className: 'col-sm-4 site ' },
+					_react2.default.createElement(
+						'a',
+						{ href: 'https://www.homeaway.co.uk/arlanda', target: '_blank' },
+						_react2.default.createElement('div', { className: 'view arlanda' })
+					)
 				),
 				_react2.default.createElement(
 					'div',
-					{ className: 'col-sm-4 site' },
-					_react2.default.createElement('div', { className: 'view' })
+					{ className: 'col-sm-4 site ' },
+					_react2.default.createElement(
+						'a',
+						{ href: 'https://www.homeaway.co.uk/info/halloween', target: '_blank' },
+						_react2.default.createElement('div', { className: 'view monstermas' })
+					)
 				),
 				_react2.default.createElement(
 					'div',
-					{ className: 'col-sm-4 site' },
-					_react2.default.createElement('div', { className: 'view' })
+					{ className: 'col-sm-4 site ' },
+					_react2.default.createElement(
+						'a',
+						{ href: 'https://www.homeaway.com/lp/destination-races-VIP-upgrade/?', target: '_blank' },
+						_react2.default.createElement('div', { className: 'view destination-races' })
+					)
 				),
 				_react2.default.createElement(
 					'div',
-					{ className: 'col-sm-4 site' },
-					_react2.default.createElement('div', { className: 'view' })
+					{ className: 'col-sm-4 site ' },
+					_react2.default.createElement(
+						'a',
+						{ href: 'http://picsol.co.uk/', target: '_blank' },
+						_react2.default.createElement('div', { className: 'view picsol' })
+					)
 				),
 				_react2.default.createElement(
 					'div',
-					{ className: 'col-sm-4 site' },
-					_react2.default.createElement('div', { className: 'view' })
+					{ className: 'col-sm-4 site ' },
+					_react2.default.createElement(
+						'a',
+						{ href: 'https://www.hays.co.uk/jobs/mnn-ceo/index.htm', target: '_blank' },
+						_react2.default.createElement('div', { className: 'view mmn' })
+					)
 				),
 				_react2.default.createElement(
 					'div',

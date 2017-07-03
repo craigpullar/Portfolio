@@ -63,11 +63,32 @@ nav {
 	margin:20px auto;
 	.view{
 		background:#D8D8D8;
-		border:1px solid #979797;
+		border:1px solid #ccc;
 		width:300px;
 		height:300px;
 		margin:0px auto;
+		cursor:pointer;
+
+		&.vacation-equation {
+			@include bg-cover('./../images/sites/vacation-equation-desktop.png', center);
+		}
+		&.arlanda {
+			@include bg-cover('./../images/sites/arlanda-desktop.png', center);
+		}
+		&.mmn {
+			@include bg-cover('./../images/sites/mmn-desktop.png', center);
+		}
+		&.monstermas {
+			@include bg-cover('./../images/sites/monstermas-desktop.png', center);
+		}
+		&.picsol {
+			@include bg-cover('./../images/sites/picsol-desktop.png', center);
+		}
+		&.destination-races {
+			@include bg-cover('./../images/sites/destination-races-desktop.png', center);
+		}
 	}
+
 }
 .experience {
 	padding-bottom:100px;
