@@ -57,6 +57,10 @@ nav {
 	top:-110px;
 	background:#E74C3C;
 	box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+
+	&:hover {
+		background:#c0392b;
+	}
 }
 
 .work .site {
@@ -141,21 +145,42 @@ nav {
 			@include placeholder {
 				color:#CCCCCC;
 				font-size:1.5rem;
+				transition:all 0.2s ease-in;
 			}
 		}
 		input {
 			position:relative;
 			padding-top:0px;
 			padding-bottom:20px;
+			transition:all 0.2s ease-in;
+
+			&.focus {
+				padding-top:10px;
+				padding-bottom:10px;
+				@include placeholder {
+					color:#CCCCCC;
+					font-size:2.2rem;
+				}
+			}
 		}
 		textarea {
 			resize:none;
 		}
 	}
-	.cta img {
-		height:26px;
-		position:relative;
-		top:-3px;
-		margin-left:10px;
+	.cta {
+		transition:all 0.2s ease-in;
+		img {
+			height:26px;
+			position:relative;
+			top:-3px;
+			margin-left:10px;
+			transition:all 0.2s ease-in;
+		}
+		&:hover {
+			margin-left:10px;
+			img {
+				margin-left:20px;
+			}
+		}
 	}
 }

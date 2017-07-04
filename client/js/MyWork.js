@@ -30,9 +30,6 @@ class MyWork extends React.Component {
 			<Site 
 			link="https://www.hays.co.uk/jobs/mnn-ceo/index.htm" 
 			class="mmn" />
-			<div className="col-sm-12">
-			<a href="" className="btn cta">More</a>
-			</div>
 			</div>
 			</div>
 			);

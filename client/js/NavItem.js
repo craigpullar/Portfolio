@@ -1,22 +1,33 @@
 import * as globals from "./globals";
 import React from 'react';
 import ReactDOM from 'react-dom';
+import $ from 'jquery';
 
 class NavItem extends React.Component {
 	construcor(props) {
 		this.super(props);
+		
+
 	}
-	onClick() {
-		console.log('click');
-		return false;
+	onClick(event, props) {
+		event.preventDefault();
+		let section = this.props.section;
+		let callback = this.props.scrollCallback;
+
+		$('html, body').animate({
+			scrollTop: $(section).offset().top},
+			500, function(){
+				callback();
+			});
+
 	}
 	render() {
 		return (
-			<li onClick={() =>{return this.onClick()}}>
+			<li onClick={() => this.onClick(event,this.props)}>
 			{this.props.text}
 			</li>
 			);
-		}
 	}
+}
 
-	export {NavItem as default};
+export {NavItem as default};
