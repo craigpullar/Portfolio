@@ -15,3 +15,24 @@
 	&::-moz-placeholder          {@content}
 	&:-ms-input-placeholder      {@content}  
 }
+
+$tablet: 1000px;
+$mobile: 700px;
+$sm-mobile: 320px;
+
+@mixin tablet {
+	@media (max-width: #{$tablet}) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (max-width: #{$mobile}) {
+		@content;
+	}
+}
+@mixin sm-mobile {
+	@media (max-width: #{$sm-mobile}) {
+		@content;
+	}
+}

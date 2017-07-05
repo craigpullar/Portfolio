@@ -5820,25 +5820,26 @@ button.close {
 /* Mixins */
 /* Partials */
 /* Layout: Default */
-body {
+html, body {
+  overflow-x: hidden;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: #333333; }
-  body h1 {
+  html h1, body h1 {
     font-size: 3.9rem; }
-  body h2 {
+  html h2, body h2 {
     font-size: 3.9rem;
     margin: 30px 0px 30px 0px; }
-  body p, body li {
+  html p, html li, body p, body li {
     font-size: 2.2rem; }
-  body .container-fluid, body footer {
+  html .container-fluid, html footer, body .container-fluid, body footer {
     padding: 50px 20px; }
-    body .container-fluid .row, body footer .row {
+    html .container-fluid .row, html footer .row, body .container-fluid .row, body footer .row {
       max-width: 1024px;
       margin: 0px auto;
       display: block;
       position: relative; }
-    body .container-fluid .btn, body footer .btn {
+    html .container-fluid .btn, html footer .btn, body .container-fluid .btn, body footer .btn {
       background: #3498DB;
       padding: 15px 30px;
       color: #fff;
@@ -5847,7 +5848,7 @@ body {
       font-weight: 300;
       margin: 30px 0px;
       transition: all 0.2s ease-in; }
-      body .container-fluid .btn:hover, body footer .btn:hover {
+      html .container-fluid .btn:hover, html footer .btn:hover, body .container-fluid .btn:hover, body footer .btn:hover {
         background: #2980b9; }
 
 /* View : Index */
@@ -5876,6 +5877,19 @@ nav {
       border-bottom: 2px solid #fff; }
     nav li.logo:hover {
       border-bottom: 2px solid transparent; }
+  @media (max-width: 700px) {
+    nav li {
+      display: none; }
+    nav li.logo {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 40px 0px 0px 0px;
+      margin: 0px; }
+      nav li.logo img {
+        margin: 0px auto;
+        display: block;
+        position: relative; } }
 
 .intro .profile {
   border-radius: 50%;
@@ -5893,6 +5907,10 @@ nav {
   background-size: cover;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/profile.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/profile.jpg', sizingMethod='scale')"; }
+  @media (max-width: 320px) {
+    .intro .profile {
+      width: 250px;
+      height: 250px; } }
 
 .intro .btn.cta {
   position: absolute;
@@ -5902,9 +5920,23 @@ nav {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
   .intro .btn.cta:hover {
     background: #c0392b; }
+  @media (max-width: 700px) {
+    .intro .btn.cta {
+      position: relative;
+      right: initial;
+      top: initial; } }
+
+.work a {
+  outline: none; }
 
 .work .site {
   margin: 20px auto; }
+  @media (max-width: 1000px) {
+    .work .site {
+      width: 50%; } }
+  @media (max-width: 700px) {
+    .work .site {
+      width: 100%; } }
   .work .site .view {
     background: #D8D8D8;
     border: 1px solid #ccc;
@@ -5912,54 +5944,76 @@ nav {
     height: 300px;
     margin: 0px auto;
     cursor: pointer; }
+    @media (max-width: 320px) {
+      .work .site .view {
+        width: 250px;
+        height: 250px; } }
     .work .site .view.vacation-equation {
-      background: url("./../images/sites/vacation-equation-desktop.png") center;
+      background: url("./../images/sites/vacation-equation-desktop.png") 50% 40%;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/vacation-equation-desktop.png', sizingMethod='scale');
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/vacation-equation-desktop.png', sizingMethod='scale')"; }
+      @media (max-width: 700px) {
+        .work .site .view.vacation-equation {
+          background-image: url("./../images/sites/vacation-equation-mobile.png"); } }
     .work .site .view.arlanda {
-      background: url("./../images/sites/arlanda-desktop.png") center;
+      background: url("./../images/sites/arlanda-desktop.png") 50% 40%;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/arlanda-desktop.png', sizingMethod='scale');
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/arlanda-desktop.png', sizingMethod='scale')"; }
+      @media (max-width: 700px) {
+        .work .site .view.arlanda {
+          background-image: url("./../images/sites/arlanda-mobile.png"); } }
     .work .site .view.mmn {
-      background: url("./../images/sites/mmn-desktop.png") center;
+      background: url("./../images/sites/mmn-desktop.png") 50% 40%;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/mmn-desktop.png', sizingMethod='scale');
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/mmn-desktop.png', sizingMethod='scale')"; }
+      @media (max-width: 700px) {
+        .work .site .view.mmn {
+          background-image: url("./../images/sites/mmn-mobile.png"); } }
     .work .site .view.monstermas {
-      background: url("./../images/sites/monstermas-desktop.png") center;
+      background: url("./../images/sites/monstermas-desktop.png") 50% 40%;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/monstermas-desktop.png', sizingMethod='scale');
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/monstermas-desktop.png', sizingMethod='scale')"; }
+      @media (max-width: 700px) {
+        .work .site .view.monstermas {
+          background-image: url("./../images/sites/monstermas-mobile.png"); } }
     .work .site .view.picsol {
-      background: url("./../images/sites/picsol-desktop.png") center;
+      background: url("./../images/sites/picsol-desktop.png") 50% 40%;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/picsol-desktop.png', sizingMethod='scale');
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/picsol-desktop.png', sizingMethod='scale')"; }
+      @media (max-width: 700px) {
+        .work .site .view.picsol {
+          background-image: url("./../images/sites/picsol-mobile.png"); } }
     .work .site .view.destination-races {
-      background: url("./../images/sites/destination-races-desktop.png") center;
+      background: url("./../images/sites/destination-races-desktop.png") 50% 40%;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/destination-races-desktop.png', sizingMethod='scale');
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/destination-races-desktop.png', sizingMethod='scale')"; }
+      @media (max-width: 700px) {
+        .work .site .view.destination-races {
+          background-image: url("./../images/sites/destination-races-mobile.png"); } }
 
 .experience {
   padding-bottom: 150px !important; }
@@ -5988,15 +6042,26 @@ nav {
     background: #fff;
     padding: 50px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
+    @media (max-width: 700px) {
+      .form .col-sm-12 {
+        padding: 20px; } }
     .form .col-sm-12 h2 {
       margin-bottom: 50px; }
   .form .col-sm-6 {
     position: relative; }
+    @media (max-width: 700px) {
+      .form .col-sm-6 {
+        width: 100%; } }
     .form .col-sm-6 .middle {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       padding: 20px; }
+      @media (max-width: 700px) {
+        .form .col-sm-6 .middle {
+          position: relative;
+          transform: none;
+          top: initial; } }
   .form form input, .form form textarea {
     width: 100%;
     border-radius: 10px;
@@ -6054,5 +6119,53 @@ nav {
       margin-left: 10px; }
       .form .cta:hover img {
         margin-left: 20px; }
+    @media (max-width: 700px) {
+      .form .cta {
+        width: 100%; } }
+
+.slick-slide {
+  height: auto !important;
+  outline: none !important; }
+  .slick-slide:focus {
+    outline: none !important; }
+
+.mob-nav-btn, .mob-nav {
+  display: none; }
+  @media (max-width: 700px) {
+    .mob-nav-btn, .mob-nav {
+      display: block; } }
+
+.mob-nav-btn {
+  position: fixed;
+  top: 50px;
+  right: -20px;
+  color: #fff;
+  border-radius: 100px;
+  background: #333;
+  padding: 10px;
+  padding-right: 50px;
+  z-index: 8;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
+
+.mob-nav {
+  width: 300px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 5;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  background: #fff;
+  padding: 80px 20px 0px 20px;
+  transform: translateX(-300px);
+  transition: all 0.2s ease-in; }
+  .mob-nav.open {
+    transform: translateX(0); }
+  .mob-nav li {
+    text-align: right;
+    top: 50px;
+    position: relative;
+    list-style: none;
+    padding: 12px 0px; }
 
 /*# sourceMappingURL=deploy.css.map */

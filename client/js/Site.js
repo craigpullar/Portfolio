@@ -12,7 +12,7 @@ class Site extends React.Component {
 			</a>
 			</div>
 			);
+		}
 	}
-}
 
-export {Site as default};
+	export {Site as default};

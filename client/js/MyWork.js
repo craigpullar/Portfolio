@@ -12,6 +12,7 @@ class MyWork extends React.Component {
 			<div className="col-sm-12">
 			<h2>My Work</h2>
 			</div>
+			<div className="slick">
 			<Site 
 			link="https://www.homeaway.com/lp/vacation-equation/" 
 			class="vacation-equation" />
@@ -32,8 +33,9 @@ class MyWork extends React.Component {
 			class="mmn" />
 			</div>
 			</div>
+			</div>
 			);
+		}
 	}
-}
 
-export {MyWork as default};
+	export {MyWork as default};

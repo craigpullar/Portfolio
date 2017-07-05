@@ -14,9 +14,10 @@ class NavItem extends React.Component {
 		let section = this.props.section;
 		let callback = this.props.scrollCallback;
 
-		$('html, body').animate({
+		$('body').animate({
 			scrollTop: $(section).offset().top},
 			500, function(){
+				console.log('hi');
 				callback();
 			});
 
@@ -27,7 +28,7 @@ class NavItem extends React.Component {
 			{this.props.text}
 			</li>
 			);
+		}
 	}
-}
 
-export {NavItem as default};
+	export {NavItem as default};

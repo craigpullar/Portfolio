@@ -13,6 +13,7 @@ class MyExp extends React.Component {
 			<h2>My Experience</h2>
 			<p>Waking up at 5am gives me a lot of time to get things done.</p>
 			<br/>
+			<div className="slick">
 			<Experience title="/9" text="The name of my first site, which I built at 14" />
 			<Experience title="COO" text="The position I held in my first startup" />
 			<Experience title="2:1" text="The grade I graduated with in Computer Science" />
@@ -22,8 +23,9 @@ class MyExp extends React.Component {
 			</div>
 			</div>
 			</div>
+			</div>
 			);
-		}
 	}
+}
 
-	export {MyExp as default};
+export {MyExp as default};

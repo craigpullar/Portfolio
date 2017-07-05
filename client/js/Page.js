@@ -1,5 +1,6 @@
 /* Main */
 import * as globals from "./globals";
+import MobNav from './MobNav.js';
 import Nav from './nav.js';
 import MyWork from './MyWork.js';
 import MyExp from './MyExp.js';
@@ -17,6 +18,7 @@ class Page extends React.Component {
 	render() {
 		return (
 			<div>
+			<MobNav />
 			<Nav />
 			<Intro />
 			<MyWork />
@@ -28,7 +30,7 @@ class Page extends React.Component {
 		}
 	}
 
-export {Page as default};
+	export {Page as default};
 
 
 
