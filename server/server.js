@@ -1,4 +1,8 @@
+
+var email = require('./email');
 const Hapi = require('hapi');
+var secret = require('./secret.json');
+
 
 // Create a server with a host and port
 const server = new Hapi.Server();
@@ -76,14 +80,22 @@ var routes = [
     method: 'GET',
     path: '/images/{filename}',
     handler:function(request, reply) {
-     reply.file(`./client/images/${request.params.filename}`);
- }
+       reply.file(`./client/images/${request.params.filename}`);
+   }
 },
 {
     method: 'GET',
     path: '/images/sites/{filename}',
     handler:function(request, reply) {
         reply.file(`./client/images/sites/${request.params.filename}`);
+    }
+},
+{
+    method: 'POST',
+    path: '/sendEmail',
+    handler: function(request, reply) {
+        console.log('debug 1');
+        reply(email(secret.email_pass, request.payload.email, request.payload.name, request.payload.message));
     }
 }
 ];

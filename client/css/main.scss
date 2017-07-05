@@ -217,6 +217,10 @@ nav {
 				font-size:1.5rem;
 				transition:all 0.2s ease-in;
 			}
+
+			&.error {
+				border-color:#e74c3c;
+			}
 		}
 		input {
 			position:relative;
@@ -306,4 +310,7 @@ nav {
 		list-style:none;
 		padding:12px 0px;
 	}
+}
+.hidden {
+	display:none;
 }

@@ -14,10 +14,7 @@ class GetInTouch extends React.Component {
 			<div className="col-sm-6 match">
 			<p className="middle">Got and idea? Want to work with me? Or even just fancy a chat? Drop me a line by filling out the form and I’ll get back to you.</p>
 			</div>
-			<div className="col-sm-6 match">
 			<ContactForm />
-			</div>
-			<a href="" className="btn cta">Send <img src="./images/send.svg" /></a>
 			</div>
 			</div>
 			</div>

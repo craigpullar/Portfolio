@@ -28,6 +28,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -37,10 +39,22 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var ContactForm = function (_React$Component) {
 	_inherits(ContactForm, _React$Component);
 
-	function ContactForm() {
+	function ContactForm(props) {
 		_classCallCheck(this, ContactForm);
 
-		return _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).apply(this, arguments));
+		var _this = _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).call(this, props));
+
+		_this.state = {
+			name: '',
+			email: '',
+			message: '',
+			form: '',
+			thanks: 'hidden',
+			name_error: '',
+			email_error: '',
+			message_error: ''
+		};
+		return _this;
 	}
 
 	_createClass(ContactForm, [{
@@ -49,30 +63,131 @@ var ContactForm = function (_React$Component) {
 			if (!(0, _jquery2.default)('#' + id).val().length) (0, _jquery2.default)('#' + id).toggleClass('focus');
 		}
 	}, {
+		key: 'submitForm',
+		value: function submitForm(e) {
+			e.preventDefault();
+			if (!this.validate()) return false;
+			self = this;
+
+			var data = {
+				name: this.state.name,
+				email: this.state.email,
+				message: this.state.message
+			};
+			_jquery2.default.ajax({
+				type: 'POST',
+				url: '/sendEmail',
+				data: data
+			}).done(function (data) {
+				self.setState({
+					form: 'hidden',
+					thanks: ''
+				});
+			}).fail(function (jqXhr) {
+				self.setState({
+					form: 'hidden',
+					thanks: ''
+				});
+			});
+		}
+	}, {
+		key: 'validate',
+		value: function validate() {
+			var name = this.state.name;
+			var email = this.state.email;
+			var message = this.state.message;
+			var regex = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+
+			var pass = true;
+			if (!name) {
+				this.setState({ name_error: 'error' });
+				pass = false;
+			}
+			if (!email) {
+				this.setState({ email_error: 'error' });
+				pass = false;
+			} else if (!regex.test(email)) {
+				this.setState({ email_error: 'error' });
+				pass = false;
+			}
+			if (!message) {
+				this.setState({ message_error: 'error' });
+				pass = false;
+			}
+			return pass;
+		}
+	}, {
+		key: 'inputChange',
+		value: function inputChange(event, id) {
+			var _setState;
+
+			this.setState((_setState = {}, _defineProperty(_setState, id, event.target.value), _defineProperty(_setState, id + '_error', ''), _setState));
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			var _this2 = this;
 
 			return _react2.default.createElement(
-				'form',
-				{ action: '' },
-				_react2.default.createElement('input', { id: 'name', type: 'text', placeholder: 'Name',
-					onFocus: function onFocus() {
-						_this2.inputFocus(event, 'name');
-					},
-					onBlur: function onBlur() {
-						_this2.inputFocus(event, 'name');
-					}
-				}),
-				_react2.default.createElement('input', { id: 'email', type: 'email', placeholder: 'Email',
-					onFocus: function onFocus() {
-						_this2.inputFocus(event, 'email');
-					},
-					onBlur: function onBlur() {
-						_this2.inputFocus(event, 'email');
-					}
-				}),
-				_react2.default.createElement('textarea', { name: '', id: '', cols: '30', rows: '8', placeholder: 'What can I do for you?' })
+				'div',
+				null,
+				_react2.default.createElement(
+					'div',
+					{ className: 'col-sm-6 match' },
+					_react2.default.createElement(
+						'form',
+						{ action: '', className: this.state.form },
+						_react2.default.createElement('input', { id: 'name', type: 'text', name: 'name', placeholder: 'Name',
+							onFocus: function onFocus() {
+								_this2.inputFocus(event, 'name');
+							},
+							onBlur: function onBlur() {
+								_this2.inputFocus(event, 'name');
+							},
+							onChange: function onChange(event) {
+								_this2.inputChange(event, 'name');
+							},
+							value: this.state.name,
+							className: this.state.name_error
+						}),
+						_react2.default.createElement('input', { id: 'email', type: 'email', name: 'email', placeholder: 'Email',
+							onFocus: function onFocus() {
+								_this2.inputFocus(event, 'email');
+							},
+							onBlur: function onBlur() {
+								_this2.inputFocus(event, 'email');
+							},
+							onChange: function onChange(event) {
+								_this2.inputChange(event, 'email');
+							},
+							value: this.state.email,
+							className: this.state.email_error
+						}),
+						_react2.default.createElement('textarea', { name: 'message', id: 'message', cols: '30', rows: '8', placeholder: 'What can I do for you?',
+							onChange: function onChange(event) {
+								_this2.inputChange(event, 'message');
+							},
+							value: this.state.message,
+							className: this.state.message_error })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: this.state.thanks + " thanks" },
+						_react2.default.createElement(
+							'p',
+							{ className: 'middle' },
+							'Thanks, I\'ll get back to you as soon as I can.'
+						)
+					)
+				),
+				_react2.default.createElement(
+					'a',
+					{ href: '', className: this.state.form + " btn cta", onClick: function onClick(e) {
+							_this2.submitForm(e);
+						} },
+					'Send ',
+					_react2.default.createElement('img', { src: './images/send.svg' })
+				)
 			);
 		}
 	}]);
@@ -277,17 +392,7 @@ var GetInTouch = function (_React$Component) {
 								'Got and idea? Want to work with me? Or even just fancy a chat? Drop me a line by filling out the form and I\u2019ll get back to you.'
 							)
 						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'col-sm-6 match' },
-							_react2.default.createElement(_ContactForm2.default, null)
-						),
-						_react2.default.createElement(
-							'a',
-							{ href: '', className: 'btn cta' },
-							'Send ',
-							_react2.default.createElement('img', { src: './images/send.svg' })
-						)
+						_react2.default.createElement(_ContactForm2.default, null)
 					)
 				)
 			);
