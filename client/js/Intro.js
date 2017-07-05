@@ -17,16 +17,16 @@ class Intro extends React.Component {
 			<div className="container-fluid intro text-center">
 			<div className="row">
 			<div className="col-sm-12">
-			<div className="profile">
+			<div className="profile" data-animation="fadeIn">
 			</div>
-			<h2>Craig Pullar</h2>
-			<p>I design, build and market websites. <br/> I’m also pretty good at it.</p>
+			<h2 data-animation="fadeInUp">Craig Pullar</h2>
+			<p data-animation="fadeInUp">I design, build and market websites. <br/> I’m also pretty good at it.</p>
 			<a href="" className="btn cta" onClick={this.scrollToForm}>Get in touch</a>
 			</div>
 			</div>
 			</div>
 			);
+		}
 	}
-}
 
-export {Intro as default};
+	export {Intro as default};

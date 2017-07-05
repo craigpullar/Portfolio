@@ -28,6 +28,7 @@
     "grunt-release": "^0.14.0",
     "grunt-sass": "^2.0.0",
     "grunt-shell": "^2.1.0",
+    "jquery-inview": "^1.1.2",
     "jquery-match-height": "^0.7.2",
     "nodemailer": "^4.0.1",
     "slick-carousel": "^1.6.0"

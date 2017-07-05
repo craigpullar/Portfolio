@@ -10,16 +10,28 @@ class MyExp extends React.Component {
 			<div className="container-fluid experience text-center">
 			<div className="row">
 			<div className="col-sm-12">
-			<h2>My Experience</h2>
-			<p>Waking up at 5am gives me a lot of time to get things done.</p>
+			<h2 data-animation="fadeInUp">My Experience</h2>
+			<p data-animation="fadeInUp">Waking up at 5am gives me a lot of time to get things done.</p>
 			<br/>
 			<div className="slick">
-			<Experience title="/9" text="The name of my first site, which I built at 14" />
-			<Experience title="COO" text="The position I held in my first startup" />
-			<Experience title="2:1" text="The grade I graduated with in Computer Science" />
-			<Experience title="100+" text="Projects I have worked on" />
-			<Experience title="10" text="The number of programming languages I can write in" />
-			<Experience title="2+" text="Years experience working on agile teams" />
+			<Experience title="/9" text="The name of my first site, which I built at 14" 
+			animation="fadeInUp"
+			animationDelay="0"/>
+			<Experience title="COO" text="The position I held in my first startup" 
+			animation="fadeInUp"
+			animationDelay="00"/>
+			<Experience title="2:1" text="The grade I graduated with in Computer Science" 
+			animation="fadeInUp"
+			animationDelay="00"/>
+			<Experience title="100+" text="Projects I have worked on" 
+			animation="fadeInUp"
+			animationDelay="0"/>
+			<Experience title="10" text="The number of programming languages I can write in" 
+			animation="fadeInUp"
+			animationDelay="0"/>
+			<Experience title="2+" text="Years experience working on agile teams" 
+			animation="fadeInUp"
+			animationDelay="0"/>
 			</div>
 			</div>
 			</div>

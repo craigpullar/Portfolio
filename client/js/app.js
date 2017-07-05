@@ -3,6 +3,7 @@ import * as globals from "./globals";
 import * as components from "./components";
 import Page from './Page';
 import slick from 'slick-carousel';
+import 'jquery-inview';
 
 
 
@@ -12,8 +13,11 @@ import $ from 'jquery';
 import matchHeight from 'jquery-match-height';
 
 $(function(){
+
+	/* Init MatchHeight*/
 	$('.match').matchHeight();
 
+	/* Init Slick */
 	$('.slick').slick({
 		dots: true,
 		infinite: true,
@@ -28,10 +32,27 @@ $(function(){
 		]
 	});
 
+	/* Fix slick on resize */
 	$(window).resize(function() {
 		$('.slick').slick('resize');
 	});
 
+	/* Init Animations */
+	if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		$('*[data-animation]').each(function(){
+			$(this).css('opacity', 0);
+			$(this).on('inview', function(event, isInView) {
+				if (isInView) {
+					$(this).delay($(this).attr('data-animation-delay')).queue(function(next){
+						$(this).addClass('animated ' + $(this).attr('data-animation'));
+						next();
+					});
+				}
+			});
+		});
+
+	}
+	
 
 });
 

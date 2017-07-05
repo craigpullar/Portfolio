@@ -10,27 +10,39 @@ class MyWork extends React.Component {
 			<div className="container-fluid light-grey work text-center">	
 			<div className="row">
 			<div className="col-sm-12">
-			<h2>My Work</h2>
+			<h2 data-animation="fadeInUp">My Work</h2>
 			</div>
 			<div className="slick">
 			<Site 
 			link="https://www.homeaway.com/lp/vacation-equation/" 
-			class="vacation-equation" />
+			class="vacation-equation" 
+			animation="fadeInUp"
+			animationDelay="0"/>
 			<Site 
 			link="https://www.homeaway.co.uk/arlanda" 
-			class="arlanda" />
+			class="arlanda" 
+			animation="fadeInUp"
+			animationDelay="00"/>
 			<Site 
 			link="https://www.homeaway.co.uk/info/halloween" 
-			class="monstermas" />
+			class="monstermas" 
+			animation="fadeInUp"
+			animationDelay="00"/>
 			<Site 
 			link="https://www.homeaway.com/lp/destination-races-VIP-upgrade/?" 
-			class="destination-races" />
+			class="destination-races"
+			animation="fadeInUp"
+			animationDelay="300"/>
 			<Site 
 			link="http://picsol.co.uk/" 
-			class="picsol" />
+			class="picsol" 
+			animation="fadeInUp"
+			animationDelay="00"/>
 			<Site 
 			link="https://www.hays.co.uk/jobs/mnn-ceo/index.htm" 
-			class="mmn" />
+			class="mmn" 
+			animation="fadeInUp"
+			animationDelay="00"/>
 			</div>
 			</div>
 			</div>
