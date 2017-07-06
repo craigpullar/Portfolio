@@ -35,6 +35,9 @@ nav {
 		&.logo:hover {
 			border-bottom:2px solid transparent;
 		}
+		&.logo {
+			cursor:default;
+		}
 	}
 
 	@include mobile {
@@ -157,6 +160,7 @@ nav {
 	padding-bottom:150px!important;
 	.poe {
 		margin-top:30px;
+		outline:none;
 
 		span.title {
 			font-size:6rem;
@@ -213,6 +217,7 @@ nav {
 			font-size:2.2rem;
 			margin:5px 0px;
 			padding:10px;
+			outline:none!important;
 			@include placeholder {
 				color:#CCCCCC;
 				font-size:1.5rem;
@@ -287,6 +292,7 @@ nav {
 	padding-right:50px;
 	z-index:8;
 	box-shadow:0px 2px 4px rgba(0,0,0,0.5);
+	cursor:pointer;
 }
 .mob-nav {
 	width:300px;
@@ -305,6 +311,7 @@ nav {
 	}
 
 	li {
+		cursor:pointer;
 		text-align:right;
 		top:50px;
 		position:relative;

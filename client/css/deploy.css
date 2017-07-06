@@ -6917,7 +6917,9 @@ nav {
       border-bottom: 2px solid #fff; }
     nav li.logo:hover {
       border-bottom: 2px solid transparent; }
-  @media (max-width: 700px) {
+    nav li.logo {
+      cursor: default; }
+  @media (max-width: 767px) {
     nav li {
       display: none; }
     nav li.logo {
@@ -6960,7 +6962,7 @@ nav {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
   .intro .btn.cta:hover {
     background: #c0392b; }
-  @media (max-width: 700px) {
+  @media (max-width: 767px) {
     .intro .btn.cta {
       position: relative;
       right: initial;
@@ -6974,7 +6976,7 @@ nav {
   @media (max-width: 1000px) {
     .work .site {
       width: 50%; } }
-  @media (max-width: 700px) {
+  @media (max-width: 767px) {
     .work .site {
       width: 100%; } }
   .work .site .view {
@@ -6996,7 +6998,7 @@ nav {
       background-size: cover;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/vacation-equation-desktop.png', sizingMethod='scale');
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/vacation-equation-desktop.png', sizingMethod='scale')"; }
-      @media (max-width: 700px) {
+      @media (max-width: 767px) {
         .work .site .view.vacation-equation {
           background-image: url("./../images/sites/vacation-equation-mobile.png"); } }
     .work .site .view.arlanda {
@@ -7007,7 +7009,7 @@ nav {
       background-size: cover;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/arlanda-desktop.png', sizingMethod='scale');
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/arlanda-desktop.png', sizingMethod='scale')"; }
-      @media (max-width: 700px) {
+      @media (max-width: 767px) {
         .work .site .view.arlanda {
           background-image: url("./../images/sites/arlanda-mobile.png"); } }
     .work .site .view.mmn {
@@ -7018,7 +7020,7 @@ nav {
       background-size: cover;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/mmn-desktop.png', sizingMethod='scale');
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/mmn-desktop.png', sizingMethod='scale')"; }
-      @media (max-width: 700px) {
+      @media (max-width: 767px) {
         .work .site .view.mmn {
           background-image: url("./../images/sites/mmn-mobile.png"); } }
     .work .site .view.monstermas {
@@ -7029,7 +7031,7 @@ nav {
       background-size: cover;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/monstermas-desktop.png', sizingMethod='scale');
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/monstermas-desktop.png', sizingMethod='scale')"; }
-      @media (max-width: 700px) {
+      @media (max-width: 767px) {
         .work .site .view.monstermas {
           background-image: url("./../images/sites/monstermas-mobile.png"); } }
     .work .site .view.picsol {
@@ -7040,7 +7042,7 @@ nav {
       background-size: cover;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/picsol-desktop.png', sizingMethod='scale');
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/picsol-desktop.png', sizingMethod='scale')"; }
-      @media (max-width: 700px) {
+      @media (max-width: 767px) {
         .work .site .view.picsol {
           background-image: url("./../images/sites/picsol-mobile.png"); } }
     .work .site .view.destination-races {
@@ -7051,14 +7053,15 @@ nav {
       background-size: cover;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/destination-races-desktop.png', sizingMethod='scale');
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../images/sites/destination-races-desktop.png', sizingMethod='scale')"; }
-      @media (max-width: 700px) {
+      @media (max-width: 767px) {
         .work .site .view.destination-races {
           background-image: url("./../images/sites/destination-races-mobile.png"); } }
 
 .experience {
   padding-bottom: 150px !important; }
   .experience .poe {
-    margin-top: 30px; }
+    margin-top: 30px;
+    outline: none; }
     .experience .poe span.title {
       font-size: 6rem;
       color: #fff;
@@ -7082,14 +7085,14 @@ nav {
     background: #fff;
     padding: 50px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
       .form .col-sm-12 {
         padding: 20px; } }
     .form .col-sm-12 h2 {
       margin-bottom: 50px; }
   .form .col-sm-6 {
     position: relative; }
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
       .form .col-sm-6 {
         width: 100%; } }
     .form .col-sm-6 .middle {
@@ -7097,7 +7100,7 @@ nav {
       top: 50%;
       transform: translateY(-50%);
       padding: 20px; }
-      @media (max-width: 700px) {
+      @media (max-width: 767px) {
         .form .col-sm-6 .middle {
           position: relative;
           transform: none;
@@ -7108,7 +7111,8 @@ nav {
     border: 1px solid #CCCCCC;
     font-size: 2.2rem;
     margin: 5px 0px;
-    padding: 10px; }
+    padding: 10px;
+    outline: none !important; }
     .form form input::-webkit-input-placeholder, .form form textarea::-webkit-input-placeholder {
       color: #CCCCCC;
       font-size: 1.5rem;
@@ -7161,7 +7165,7 @@ nav {
       margin-left: 10px; }
       .form .cta:hover img {
         margin-left: 20px; }
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
       .form .cta {
         width: 100%; } }
 
@@ -7173,7 +7177,7 @@ nav {
 
 .mob-nav-btn, .mob-nav {
   display: none; }
-  @media (max-width: 700px) {
+  @media (max-width: 767px) {
     .mob-nav-btn, .mob-nav {
       display: block; } }
 
@@ -7187,7 +7191,8 @@ nav {
   padding: 10px;
   padding-right: 50px;
   z-index: 8;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer; }
 
 .mob-nav {
   width: 300px;
@@ -7204,6 +7209,7 @@ nav {
   .mob-nav.open {
     transform: translateX(0); }
   .mob-nav li {
+    cursor: pointer;
     text-align: right;
     top: 50px;
     position: relative;
