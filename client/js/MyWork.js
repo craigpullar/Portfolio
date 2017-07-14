@@ -1,6 +1,4 @@
-import * as globals from "./globals";
 import Site from "./Site";
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 

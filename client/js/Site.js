@@ -1,4 +1,3 @@
-import * as globals from "./globals";
 import React from 'react';
 import ReactDOM from 'react-dom';
 

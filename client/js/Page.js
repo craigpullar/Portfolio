@@ -1,5 +1,3 @@
-/* Main */
-import * as globals from "./globals";
 import MobNav from './MobNav.js';
 import Nav from './nav.js';
 import MyWork from './MyWork.js';

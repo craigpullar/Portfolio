@@ -13,13 +13,12 @@ var config = [{
       'NODE_ENV': JSON.stringify('production')
     }
   }),
-    new webpack.optimize.AggressiveMergingPlugin()//Merge chunks 
-    ],
-    context: __dirname + '/client/js', 
-    entry: {
-      app: './app.js',
-    },
-    output: {
+  ],
+  context: __dirname + '/client/js', 
+  entry: {
+    app: './app.js',
+  },
+  output: {
     path: __dirname + '/client/', // `dist` is the destination
     filename: 'dist/[name].bundle.js',
   },
@@ -51,17 +50,13 @@ var config = [{
         loader: 'image-webpack-loader',
         query: {
           mozjpeg: {
-            progressive: true,
-          },
-          gifsicle: {
-            interlaced: false,
+            dcScanOpt: 0,
           },
           optipng: {
             optimizationLevel: 0,
           },
           pngquant: {
-            quality: '75-90',
-            speed: 9,
+            speed: 10,
           },
         },
       }

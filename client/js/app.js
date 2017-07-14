@@ -1,5 +1,4 @@
 /* Main */
-import * as globals from "./globals";
 import Page from './Page';
 import slick from 'slick-carousel';
 import 'jquery-inview';

@@ -1,6 +1,4 @@
-import * as globals from "./globals";
 import Experience from "./Experience";
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 

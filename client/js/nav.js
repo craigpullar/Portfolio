@@ -1,6 +1,4 @@
-import * as globals from "./globals";
 import NavItem from "./NavItem";
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
