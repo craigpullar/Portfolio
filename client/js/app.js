@@ -1,16 +1,13 @@
 /* Main */
 import * as globals from "./globals";
-import * as components from "./components";
 import Page from './Page';
 import slick from 'slick-carousel';
 import 'jquery-inview';
-
-
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import matchHeight from 'jquery-match-height';
+import "../css/main.scss";
 
 $(function(){
 

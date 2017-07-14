@@ -64,9 +64,16 @@ var routes = [
 },
 {
     method : 'GET',
-    path: '/js/deploy.js',
+    path: '/js/{filename}',
     handler:function(request, reply) {
-        reply.file('./client/js/deploy.js');
+        reply.file(`./client/js/${request.params.filename}`);
+    }
+},
+{
+    method : 'GET',
+    path: '/dist/{filename}',
+    handler:function(request, reply) {
+        reply.file(`./client/dist/${request.params.filename}`);
     }
 },
 {

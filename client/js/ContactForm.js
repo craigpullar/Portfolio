@@ -2,6 +2,7 @@ import * as globals from "./globals";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import send from '../images/send.svg'
 
 
 class ContactForm extends React.Component {
@@ -111,13 +112,13 @@ class ContactForm extends React.Component {
 			<p className="middle">Thanks, I'll get back to you as soon as I can.</p>
 			</div>
 			</div>
-			<a href="" className={this.state.form + " btn cta"} onClick={(e)=>{this.submitForm(e)}}>Send <img src="./images/send.svg" /></a>
+			<a href="" className={this.state.form + " btn cta"} onClick={(e)=>{this.submitForm(e)}}>Send <img src={send} /></a>
 
 			</div>
 
 
 			);
+		}
 	}
-}
 
-export {ContactForm as default};
+	export {ContactForm as default};

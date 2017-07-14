@@ -118,39 +118,39 @@ nav {
 		}
 
 		&.vacation-equation {
-			@include bg-cover('./../images/sites/vacation-equation-desktop.png', 50% 40%);
+			@include bg-cover('./../images/sites/vacation-equation-desktop.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('./../images/sites/vacation-equation-mobile.png');
+				background-image:url('./../images/sites/vacation-equation-mobile.jpg');
 			}
 		}
 		&.arlanda {
-			@include bg-cover('./../images/sites/arlanda-desktop.png', 50% 40%);
+			@include bg-cover('./../images/sites/arlanda-desktop.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('./../images/sites/arlanda-mobile.png');
+				background-image:url('./../images/sites/arlanda-mobile.jpg');
 			}
 		}
 		&.mmn {
-			@include bg-cover('./../images/sites/mmn-desktop.png', 50% 40%);
+			@include bg-cover('./../images/sites/mmn-desktop.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('./../images/sites/mmn-mobile.png');
+				background-image:url('./../images/sites/mmn-mobile.jpg');
 			}
 		}
 		&.monstermas {
-			@include bg-cover('./../images/sites/monstermas-desktop.png', 50% 40%);
+			@include bg-cover('./../images/sites/monstermas-desktop.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('./../images/sites/monstermas-mobile.png');
+				background-image:url('./../images/sites/monstermas-mobile.jpg');
 			}
 		}
 		&.picsol {
-			@include bg-cover('./../images/sites/picsol-desktop.png', 50% 40%);
+			@include bg-cover('./../images/sites/picsol-desktop.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('./../images/sites/picsol-mobile.png');
+				background-image:url('./../images/sites/picsol-mobile.jpg');
 			}
 		}
 		&.destination-races {
-			@include bg-cover('./../images/sites/destination-races-desktop.png', 50% 40%);
+			@include bg-cover('./../images/sites/destination-races-desktop.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('./../images/sites/destination-races-mobile.png');
+				background-image:url('./../images/sites/destination-races-mobile.jpg');
 			}
 		}
 	}
@@ -258,6 +258,7 @@ nav {
 		}
 		&:hover {
 			margin-left:10px;
+			text-decoration:none;
 			img {
 				margin-left:20px;
 			}
@@ -266,6 +267,9 @@ nav {
 			width:100%;
 		}
 	}
+}
+.btn:hover {
+	text-decoration:none;
 }
 .slick-slide {
 	height:auto!important;
