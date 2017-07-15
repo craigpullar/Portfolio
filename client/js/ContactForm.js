@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import send from '../images/send.svg'
+import send from '../images/send.svg';
+import smile from "../images/smile.svg";
 
 
 class ContactForm extends React.Component {
@@ -43,12 +44,14 @@ class ContactForm extends React.Component {
 				form : 'hidden',
 				thanks : ''
 			});
+			$('.form .col-sm-6').hide();
 		})
 		.fail(function(jqXhr) {
 			self.setState({
 				form : 'hidden',
 				thanks : ''
 			});
+			$('.form .col-sm-6').hide();
 		});
 
 	}
@@ -107,12 +110,14 @@ class ContactForm extends React.Component {
 			value={this.state.message}
 			className={this.state.message_error}></textarea>
 			</form>
-			<div className={this.state.thanks +" thanks"}>
-			<p className="middle">Thanks, I'll get back to you as soon as I can.</p>
-			</div>
 			</div>
 			<a href="" className={this.state.form + " btn cta"} onClick={(e)=>{this.submitForm(e)}}>Send <img src={send} /></a>
-
+			<div className={this.state.thanks +" thanks col-sm-12"}>
+			<p className="text-center"> 
+			<img src={smile} /><br/>
+			<br/>Thank you. <br/>I'll be in touch soon.
+			</p>
+			</div>
 			</div>
 
 

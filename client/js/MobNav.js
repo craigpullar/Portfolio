@@ -15,7 +15,6 @@ class MobNav extends React.Component {
 		};
 	}
 	toggleMenu() {
-		console.log(this.state.open);
 		if (!this.state.open) 
 			this.setState({
 				text : 'Close',

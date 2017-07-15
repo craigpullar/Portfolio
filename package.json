@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "My Portfolio",
   "main": "index.html",
   "scripts": {
@@ -55,5 +55,7 @@
     "webpack": "^3.2.0",
     "webpack-livereload-plugin": "^0.11.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "hammerjs": "^2.0.8"
+  }
 }

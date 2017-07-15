@@ -7,11 +7,25 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import matchHeight from 'jquery-match-height';
 import "../css/main.scss";
+import "hammerjs";
 
 $(function(){
 
 	/* Init MatchHeight*/
 	$('.match').matchHeight();
+
+	/* Init HammerJS */
+	let menu_swipe = new Hammer(document.body, {
+		inputClass: Hammer.SUPPORT_POINTER_EVENTS ? Hammer.PointerEventInput : Hammer.TouchInput
+	});
+	menu_swipe.on('swiperight', (e) => {
+		if(!$('.mob-nav').hasClass('open'))
+			$('.mob-nav-btn').click();
+	});
+	menu_swipe.on('swipeleft', (e) => {
+		if($('.mob-nav').hasClass('open'))
+			$('.mob-nav-btn').click();
+	});
 
 	/* Init Slick */
 	$('.slick').slick({

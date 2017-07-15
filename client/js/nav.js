@@ -2,6 +2,7 @@ import NavItem from "./NavItem";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import logo from "../images/logo.svg";
 
 class Nav extends React.Component {
 	render() {
@@ -13,7 +14,7 @@ class Nav extends React.Component {
 			<div className="container-fluid dark-blue header text-center">
 			<nav>
 			<li className="logo">
-			<img src="./images/logo.svg" />
+			<img src={logo} />
 			</li>
 			<NavItem text="My work" section=".work" scrollCallback={defaultCallback}/>
 			<NavItem text="My experience" section=".experience" scrollCallback={defaultCallback}/>
@@ -21,7 +22,7 @@ class Nav extends React.Component {
 			</nav>
 			</div>
 			);
+		}
 	}
-}
 
-export {Nav as default};
+	export {Nav as default};
