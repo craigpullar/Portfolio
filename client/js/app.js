@@ -28,12 +28,6 @@ $(function(){
 	});
 
 	
-
-	/* Fix slick on resize */
-	$(window).resize(function() {
-		$('.slick').slick('resize');
-	});
-
 	/* Init Animations */
 	if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		$('*[data-animation]').each(function(){
