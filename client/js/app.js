@@ -27,20 +27,7 @@ $(function(){
 			$('.mob-nav-btn').click();
 	});
 
-	/* Init Slick */
-	$('.slick').slick({
-		dots: true,
-		infinite: true,
-		speed: 500,
-		cssEase: 'linear',
-		mobileFirst : true,
-		responsive: [
-		{
-			breakpoint: 700,
-			settings: "unslick"
-		}
-		]
-	});
+	
 
 	/* Fix slick on resize */
 	$(window).resize(function() {
@@ -61,6 +48,21 @@ $(function(){
 			});
 		});
 
+	} else {
+		/* Init Slick */
+		$('.slick').slick({
+			dots: true,
+			infinite: true,
+			speed: 500,
+			cssEase: 'linear',
+			mobileFirst : true,
+			responsive: [
+			{
+				breakpoint: 700,
+				settings: "unslick"
+			}
+			]
+		});
 	}
 	
 
