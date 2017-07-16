@@ -30,7 +30,7 @@ class MyWork extends React.Component {
 			link="https://www.homeaway.com/lp/destination-races-VIP-upgrade/?" 
 			class="destination-races"
 			animation="fadeInUp"
-			animationDelay="300"/>
+			animationDelay="0"/>
 			<Site 
 			link="http://picsol.co.uk/" 
 			class="picsol" 
