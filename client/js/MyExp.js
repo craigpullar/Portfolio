@@ -9,8 +9,6 @@ class MyExp extends React.Component {
 			<div className="row">
 			<div className="col-sm-12">
 			<h2 data-animation="fadeInUp">My Experience</h2>
-			<p data-animation="fadeInUp">Waking up at 5am gives me a lot of time to get things done.</p>
-			<br/>
 			<div className="slick">
 			<Experience title="/9" text="The name of my first site, which I built at 14" 
 			animation="fadeInUp"
