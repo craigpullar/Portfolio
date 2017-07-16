@@ -164,7 +164,6 @@ nav {
 
 }
 .experience {
-	padding-bottom:150px!important;
 	.poe {
 		margin-top:30px;
 		outline:none;
@@ -324,4 +323,34 @@ nav {
 }
 .hidden {
 	display:none;
+}
+.skills {
+	padding-bottom:150px!important;
+
+	.skill {
+		padding:10px 20px;
+		border:1px solid #9B59B6;
+		color:#9B59B6;
+		display:inline-block;
+		margin:10px;
+		border-radius: 100px;
+		font-size: 2.2rem;
+
+		&.tool {
+			border:1px solid #22621A;
+			color:#22621A;
+		}
+		&.be {
+			border:1px solid #5B59B6;
+			color:#5B59B6;
+		}
+		&.pattern {
+			border:1px solid #B65959;
+			color:#B65959;
+		}
+		&.design {
+			border:1px solid #59ADB6;
+			color:#59ADB6;
+		}
+	}
 }

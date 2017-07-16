@@ -45,19 +45,18 @@ server.views({
     partialsPath: './client/partials'
 });
 
-// create your routes, currently it's just one
 
+// create your routes, currently it's just one
 var routes = [  
 {
     method: 'GET',
     path: '/',
     handler: function(request, reply) {
         var data = {
-            title: 'This is Index!',
-            message: 'Hello, World. You crazy handlebars layout'
+            title: 'Craig Pullar | Portfolio ',
+            description: 'The portfolio of Craig Pullar. Here you will find examples of work and information on experience and how to get in touch.',
+            favicon: '/images/logo.png'
         };
-
-
 
         return reply.view('index', data);
     }
@@ -87,8 +86,8 @@ var routes = [
     method: 'GET',
     path: '/images/{filename}',
     handler:function(request, reply) {
-       reply.file(`./client/images/${request.params.filename}`);
-   }
+     reply.file(`./client/images/${request.params.filename}`);
+ }
 },
 {
     method: 'GET',

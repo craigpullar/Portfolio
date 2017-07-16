@@ -17,7 +17,7 @@ class Intro extends React.Component {
 			<div className="row">
 			<div className="col-sm-12">
 
-			<div className="profile" data-animation="fadeIn">
+			<div className="profile">
 			</div>
 			<h2 data-animation="fadeInUp">Craig Pullar</h2>
 			<p data-animation="fadeInUp">I design, build and market websites. <br/> I’m also pretty good at it.</p>

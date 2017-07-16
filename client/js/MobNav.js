@@ -45,11 +45,12 @@ class MobNav extends React.Component {
 			<div className={this.state.class + " mob-nav"}>
 			<NavItem text="My work" section=".work" scrollCallback={closeMenuCallback}/>
 			<NavItem text="My experience" section=".experience" scrollCallback={closeMenuCallback}/>
+			<NavItem text="My skills" section=".skills" scrollCallback={closeMenuCallback}/>
 			<NavItem text="Get in touch" section=".form" scrollCallback={getInTouchCallback}/>
 			</div>
 			</div>
 			);
+		}
 	}
-}
 
-export {MobNav as default};
+	export {MobNav as default};

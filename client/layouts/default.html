@@ -1,13 +1,16 @@
 <html>
 <head>
-	<title>Craig Pullar | Portfolio </title>
-	<meta name="description" content="The portfolio of Craig Pullar. Here you will find examples of work and information on experience and how to get in touch.">
+	<title>{{title}}</title>
+	<meta name="description" content={{{description}}}>
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" 
+	type="image/png" 
+	href={{favicon}} />
 </head>
 <body>
-	{{{content}}}
+	<div id="app"></div>
 	<script src="/dist/app.bundle.js"></script>
 </body>
 </html>

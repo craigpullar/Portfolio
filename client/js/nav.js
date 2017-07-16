@@ -18,11 +18,12 @@ class Nav extends React.Component {
 			</li>
 			<NavItem text="My work" section=".work" scrollCallback={defaultCallback}/>
 			<NavItem text="My experience" section=".experience" scrollCallback={defaultCallback}/>
+			<NavItem text="My skills" section=".skills" scrollCallback={defaultCallback}/>
 			<NavItem text="Get in touch" section=".form" scrollCallback={getInTouchCallback}/>
 			</nav>
 			</div>
 			);
-		}
 	}
+}
 
-	export {Nav as default};
+export {Nav as default};

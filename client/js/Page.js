@@ -2,6 +2,7 @@ import MobNav from './MobNav.js';
 import Nav from './nav.js';
 import MyWork from './MyWork.js';
 import MyExp from './MyExp.js';
+import MySkills from './MySkills.js';
 import GetInTouch from './GetInTouch.js';
 import Intro from './Intro.js';
 import Footer from './Footer.js';
@@ -21,6 +22,7 @@ class Page extends React.Component {
 			<Intro />
 			<MyWork />
 			<MyExp />
+			<MySkills />
 			<GetInTouch />
 			<Footer />
 			</div>
