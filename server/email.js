@@ -1,8 +1,21 @@
+let mail_list = require('./mail_list.json');
 let nodemailer = require("nodemailer");
+var fs = require('fs');
 
 
+let email = (email_pass, from, name, message, optOut) => {
 
-let email = (email_pass, from, name, message) => {
+	let user = {
+	"name" : name,
+	"email" : from,
+	"optOut" : optOut
+}
+mail_list.push(user);
+let json = JSON.stringify(mail_list);
+fs.writeFile('mail_list.json', json, 'utf8', () => {
+
+});
+
 	let transporter = nodemailer.createTransport({
 		service: 'gmail',
 		auth: {

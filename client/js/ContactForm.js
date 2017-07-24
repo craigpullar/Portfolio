@@ -16,7 +16,8 @@ class ContactForm extends React.Component {
 			thanks : 'hidden',
 			name_error: '',
 			email_error: '',
-			message_error: ''
+			message_error: '',
+			optOut: false
 		}
 	}
 	inputFocus(event, id) {
@@ -33,6 +34,7 @@ class ContactForm extends React.Component {
 			name: this.state.name,
 			email: this.state.email,
 			message: this.state.message,
+			optOut: this.state.optOut
 		}
 		$.ajax({
 			type: 'POST',
@@ -45,6 +47,7 @@ class ContactForm extends React.Component {
 				thanks : ''
 			});
 			$('.form .col-sm-6').hide();
+			$('.form .cta').hide();
 		})
 		.fail(function(jqXhr) {
 			self.setState({
@@ -52,8 +55,12 @@ class ContactForm extends React.Component {
 				thanks : ''
 			});
 			$('.form .col-sm-6').hide();
+			$('.form .cta').hide();
 		});
 
+	}
+	optOutChange() {
+		this.setState({optOut : !this.setState.optOut});
 	}
 	validate() {
 		let name = this.state.name;
@@ -109,6 +116,10 @@ class ContactForm extends React.Component {
 			onChange={(event)=>{this.inputChange(event,'message')}}
 			value={this.state.message}
 			className={this.state.message_error}></textarea>
+			<div className="relative">
+			<input  id="optOut" type="checkbox" name="optOut" onChange={(event) => {this.optOutChange()}} /> <label>Please tick this box if you do not wish to be
+			 contacted with information on my products or services in the future.</label>
+			 </div>
 			</form>
 			</div>
 			<a href="" className={this.state.form + " btn cta"} onClick={(e)=>{this.submitForm(e)}}>Send <img src={send} /></a>

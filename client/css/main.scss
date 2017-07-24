@@ -200,6 +200,8 @@ nav {
 
 		h2 {
 			margin-bottom:50px;
+			display:block;
+			text-align:center;
 		}
 	}
 	.col-sm-6 {
@@ -228,6 +230,36 @@ nav {
 			&.error {
 				border-color:#e74c3c;
 			}
+
+			&#optOut{
+				display:block;
+				position:absolute;
+				left:0px;
+				top:50%;
+				margin-top:-5px;
+				z-index:2;
+				width:auto!important;
+				@include mobile {
+					left:0px;
+					width:auto!important;
+
+				}
+				@include tablet {
+					left:0px;
+					width:auto!important;
+				}
+			}
+		}
+		label {
+			text-align:left!important;
+			display:block;
+			width:100%;
+			padding-left:30px;
+			position:relative;
+			margin:5px 0px;
+		}
+		.relative {
+			position:relative;
 		}
 		input {
 			position:relative;
@@ -250,6 +282,11 @@ nav {
 	}
 	.cta {
 		transition:all 0.2s ease-in;
+		float:none;
+		display:inline-block;
+		position:relative;
+		left:50%;
+		transform:translateX(-50%);
 		img {
 			height:26px;
 			position:relative;
