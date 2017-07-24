@@ -3,3 +3,4 @@
 node_modules
 rethinkdb_data
 server/secret.json
+server/mail_list.json
