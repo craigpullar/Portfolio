@@ -35,7 +35,11 @@ class ContactForm extends React.Component {
 			email: this.state.email,
 			message: this.state.message,
 			optOut: this.state.optOut
-		}
+		}	
+		ga('send', 'event', {
+			eventCategory: `Contact form submit`,
+			eventAction: 'submit'
+		});
 		$.ajax({
 			type: 'POST',
 			url: '/sendEmail',
@@ -118,8 +122,8 @@ class ContactForm extends React.Component {
 			className={this.state.message_error}></textarea>
 			<div className="relative">
 			<input  id="optOut" type="checkbox" name="optOut" onChange={(event) => {this.optOutChange()}} /> <label>Please tick this box if you do not wish to be
-			 contacted with information on my products or services in the future.</label>
-			 </div>
+			contacted with information on my products or services in the future.</label>
+			</div>
 			</form>
 			</div>
 			<a href="" className={this.state.form + " btn cta"} onClick={(e)=>{this.submitForm(e)}}>Send <img src={send} /></a>

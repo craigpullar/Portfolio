@@ -5,6 +5,10 @@ import $ from 'jquery';
 class Intro extends React.Component {
 	scrollToForm(event) {
 		event.preventDefault();
+		ga('send', 'event', {
+    eventCategory: 'CTA - Get in Touch',
+    eventAction: 'click'
+  });
 		$('html, body').animate({
 			scrollTop: $('.form').offset().top-50},
 			500, function() {

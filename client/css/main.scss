@@ -130,10 +130,10 @@ nav {
 				background-image:url('./../images/sites/vacation-equation-mobile.jpg');
 			}
 		}
-		&.arlanda {
-			@include bg-cover('./../images/sites/arlanda-desktop.jpg', 50% 40%);
+		&.primary-home {
+			@include bg-cover('./../images/sites/primary-home.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('./../images/sites/arlanda-mobile.jpg');
+				background-image:url('./../images/sites/primary-home-mob.jpg');
 			}
 		}
 		&.mmn {
