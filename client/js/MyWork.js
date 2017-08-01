@@ -17,11 +17,6 @@ class MyWork extends React.Component {
 			animation="fadeInUp"
 			animationDelay="0"/>
 			<Site 
-			link="https://www.homeaway.co.uk/arlanda" 
-			class="arlanda" 
-			animation="fadeInUp"
-			animationDelay="00"/>
-			<Site 
 			link="https://www.homeaway.co.uk/info/halloween" 
 			class="monstermas" 
 			animation="fadeInUp"
@@ -31,6 +26,11 @@ class MyWork extends React.Component {
 			class="destination-races"
 			animation="fadeInUp"
 			animationDelay="0"/>
+			<Site 
+			link="https://www.homeaway.co.uk/lp/primary-home/" 
+			class="primary-home" 
+			animation="fadeInUp"
+			animationDelay="00"/>
 			<Site 
 			link="http://picsol.co.uk/" 
 			class="picsol" 

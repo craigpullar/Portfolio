@@ -31,26 +31,33 @@ class MobNav extends React.Component {
 			});
 	}
 	render() {
-		let closeMenuCallback = () => {
+		let closeMenuCallback = (section) => {
 			$('.mob-nav-btn').click();
+			defaultCallback(section);
 		};
-		let getInTouchCallback = () => {
-			closeMenuCallback();
+		let getInTouchCallback = (section) => {
+			$('.mob-nav-btn').click();
+			defaultCallback(section);
 			$('form input:first-of-type').focus();
 		}
-		let defaultCallback = () => {return false;};
+		let defaultCallback = (section) => {
+			ga('send', 'event', {
+				eventCategory: `Nav - ${section}`,
+				eventAction: 'click'
+			});
+		};
 		return (
 			<div>
 			<div className="mob-nav-btn" onClick={() => {this.toggleMenu()}}>{this.state.text}</div>
 			<div className={this.state.class + " mob-nav"}>
-			<NavItem text="My work" section=".work" scrollCallback={closeMenuCallback}/>
-			<NavItem text="My experience" section=".experience" scrollCallback={closeMenuCallback}/>
-			<NavItem text="My skills" section=".skills" scrollCallback={closeMenuCallback}/>
-			<NavItem text="Get in touch" section=".form" scrollCallback={getInTouchCallback}/>
+			<NavItem text="My work" section=".work" scrollCallback={() => {closeMenuCallback('My work')}}/>
+			<NavItem text="My experience" section=".experience" scrollCallback={() => {closeMenuCallback('My exp')}}/>
+			<NavItem text="My skills" section=".skills" scrollCallback={() => {closeMenuCallback('My skills')}}/>
+			<NavItem text="Get in touch" section=".form" scrollCallback={() => {getInTouchCallback('Get in touch')}}/>
 			</div>
 			</div>
 			);
-		}
 	}
+}
 
-	export {MobNav as default};
+export {MobNav as default};
