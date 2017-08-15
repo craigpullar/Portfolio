@@ -50,6 +50,8 @@ $(function(){
 			speed: 500,
 			cssEase: 'linear',
 			mobileFirst : true,
+			autoplay: true,
+  			autoplaySpeed: 2000,
 			responsive: [
 			{
 				breakpoint: 700,
