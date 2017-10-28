@@ -5,29 +5,26 @@ import $ from 'jquery';
 class NavItem extends React.Component {
 	construcor(props) {
 		this.super(props);
-		
 
+		this.click_event = this.click_event.bind(this);
+		
 	}
-	onClick(event, props) {
-		event.preventDefault();
+	click_event(e) {
+		e.preventDefault();
 		let section = this.props.section;
 		let callback = this.props.scrollCallback;
 
-		$('body').animate({
-			scrollTop: $(section).offset().top},
-			500, function(){
-				console.log('hi');
-				callback();
-			});
+		document.querySelector(section).scrollIntoView();
+		callback();
 
 	}
 	render() {
 		return (
-			<li onClick={() => this.onClick(event,this.props)}>
+			<li onClick={(e) => this.click_event(e)}>
 			{this.props.text}
 			</li>
 			);
-		}
 	}
+}
 
-	export {NavItem as default};
+export {NavItem as default};

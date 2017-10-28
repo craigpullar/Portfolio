@@ -41,28 +41,7 @@ var config = [{
       'sass-loader',
       ],
       include: __dirname + '/client/css',
-    },{
-      test: /\.(gif|png|jpg|svg)$/i,
-      include: __dirname + '/client/images',
-      loaders: [
-      'file-loader?name=dist/[hash].[ext]',
-      {
-        loader: 'image-webpack-loader',
-        query: {
-          mozjpeg: {
-            dcScanOpt: 0,
-          },
-          optipng: {
-            optimizationLevel: 0,
-          },
-          pngquant: {
-            speed: 10,
-          },
-        },
-      }
-      ]
     }
-
     ]
   }
 }];

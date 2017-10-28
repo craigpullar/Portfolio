@@ -78,7 +78,7 @@ nav {
 	position:relative;
 	margin-top:-210px;
 	// background:blue;
-	@include bg-cover('./../images/profile.jpg', null);
+	@include bg-cover('/images/profile.jpg', null);
 	@include sm-mobile {
 		width:250px;
 		height:250px;
@@ -125,39 +125,39 @@ nav {
 		}
 
 		&.vacation-equation {
-			@include bg-cover('./../images/sites/vacation-equation-desktop.jpg', 50% 40%);
+			@include bg-cover('/images/sites/vacation-equation-desktop.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('./../images/sites/vacation-equation-mobile.jpg');
+				background-image:url('/images/sites/vacation-equation-mobile.jpg');
 			}
 		}
 		&.primary-home {
-			@include bg-cover('./../images/sites/primary-home.jpg', 50% 40%);
+			@include bg-cover('/images/sites/primary-home.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('./../images/sites/primary-home-mob.jpg');
+				background-image:url('/images/sites/primary-home-mob.jpg');
 			}
 		}
 		&.mmn {
-			@include bg-cover('./../images/sites/mmn-desktop.jpg', 50% 40%);
+			@include bg-cover('/images/sites/mmn-desktop.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('./../images/sites/mmn-mobile.jpg');
+				background-image:url('/images/sites/mmn-mobile.jpg');
 			}
 		}
 		&.monstermas {
-			@include bg-cover('./../images/sites/monstermas-desktop.jpg', 50% 40%);
+			@include bg-cover('/images/sites/monstermas-desktop.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('./../images/sites/monstermas-mobile.jpg');
+				background-image:url('/images/sites/monstermas-mobile.jpg');
 			}
 		}
 		&.picsol {
-			@include bg-cover('./../images/sites/picsol-desktop.jpg', 50% 40%);
+			@include bg-cover('/images/sites/picsol-desktop.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('./../images/sites/picsol-mobile.jpg');
+				background-image:url('/images/sites/picsol-mobile.jpg');
 			}
 		}
 		&.destination-races {
-			@include bg-cover('./../images/sites/destination-races-desktop.jpg', 50% 40%);
+			@include bg-cover('/images/sites/destination-races-desktop.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('./../images/sites/destination-races-mobile.jpg');
+				background-image:url('/images/sites/destination-races-mobile.jpg');
 			}
 		}
 	}
@@ -187,7 +187,7 @@ nav {
 		padding:50px 0px;
 	}
 
-	@include bg-cover('./../images/form-bg.jpg', null);
+	@include bg-cover('/images/form-bg.jpg', null);
 	.form-cont {
 		margin-top:-80px;
 		background:#fff;

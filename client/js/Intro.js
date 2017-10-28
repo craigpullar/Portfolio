@@ -6,14 +6,10 @@ class Intro extends React.Component {
 	scrollToForm(event) {
 		event.preventDefault();
 		ga('send', 'event', {
-    eventCategory: 'CTA - Get in Touch',
-    eventAction: 'click'
-  });
-		$('html, body').animate({
-			scrollTop: $('.form').offset().top-50},
-			500, function() {
-				$('form input:first-of-type').focus();
-			});
+			eventCategory: 'CTA - Get in Touch',
+			eventAction: 'click'
+		});
+		document.querySelector('.form').scrollIntoView();
 	}
 	render() {
 		return (
@@ -30,7 +26,7 @@ class Intro extends React.Component {
 			</div>
 			</div>
 			);
-		}
 	}
+}
 
-	export {Intro as default};
+export {Intro as default};

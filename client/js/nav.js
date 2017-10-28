@@ -2,7 +2,7 @@ import NavItem from "./NavItem";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import logo from "../images/logo.svg";
+let logo = "../images/logo.svg";
 
 class Nav extends React.Component {
 	render() {
@@ -11,10 +11,10 @@ class Nav extends React.Component {
 			defaultCallback(section);
 		}
 		let defaultCallback = (section) => {
-				ga('send', 'event', {
-    eventCategory: `Nav - ${section}`,
-    eventAction: 'click'
-  });
+			ga('send', 'event', {
+				eventCategory: `Nav - ${section}`,
+				eventAction: 'click'
+			});
 		};
 		return (
 			<div className="container-fluid dark-blue header text-center">

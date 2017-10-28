@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import send from '../images/send.svg';
-import smile from "../images/smile.svg";
+let send = '../images/send.svg';
+let smile = "../images/smile.svg";
 
 
 class ContactForm extends React.Component {
@@ -137,7 +137,7 @@ class ContactForm extends React.Component {
 
 
 			);
-		}
-	}
+}
+}
 
-	export {ContactForm as default};
+export {ContactForm as default};
