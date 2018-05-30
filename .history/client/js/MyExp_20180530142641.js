@@ -17,8 +17,8 @@ class MyExp extends React.Component {
 								animationDelay="0"
 							/>
 							<Experience
-								title="Startup to Corporation"
-								text="I've worked in all range of businesses" 
+								title="COO"
+								text="The position I held in my first startup" 
 								animation="fadeInUp"
 								animationDelay="00"
 							/>

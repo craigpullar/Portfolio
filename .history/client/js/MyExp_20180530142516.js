@@ -17,8 +17,8 @@ class MyExp extends React.Component {
 								animationDelay="0"
 							/>
 							<Experience
-								title="Startup to Corporation"
-								text="I've worked in all range of businesses" 
+								title="COO"
+								text="The position I held in my first startup" 
 								animation="fadeInUp"
 								animationDelay="00"
 							/>
@@ -35,14 +35,14 @@ class MyExp extends React.Component {
 								animationDelay="0"
 							/>
 							<Experience 
-								title="3"
-								text="The number of Agile Teams I've worked in" 
+								title="10"
+								text="The number of programming languages I can write in" 
 								animation="fadeInUp"
 								animationDelay="0"
 							/>
 							<Experience
 								title="4+"
-								text="Years experience of professional Web Development" 
+								text="Years experience of proffesional Web Development" 
 								animation="fadeInUp"
 								animationDelay="0"
 							/>
