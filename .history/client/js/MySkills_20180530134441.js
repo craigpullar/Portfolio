@@ -5,15 +5,16 @@ import skills from "./skills.json";
 import Skill from "./Skills.js";
 
 
-const MySkillsSection = () => {
-	const renderSkill = (skillData) => (
+const MySkilsSection = () => {
+	const skillsJSX = skills.map(({ type, text }) =>
 		<Skill 
-			{...skillData}
+			type={type}
+			text={text}
 			animation="fadeInUp"
 			animationDelay="0"
 		/>
 	);
-
+	
 	return (
 		<div className="container-fluid light-grey skills text-center">	
 			<div className="row">
@@ -21,11 +22,16 @@ const MySkillsSection = () => {
 					<h2 data-animation="fadeInUp">
 						My Skills
 					</h2>	
-					{skills.map(renderSkill)}
+					{skillsJSX}
 				</div>
 			</div>
 		</div>
 	);
-};
+}
+class MySkills extends React.Component {
+	render() {
+		
+		}
+	}
 
-export default MySkillsSection;
+export {MySkills as default};

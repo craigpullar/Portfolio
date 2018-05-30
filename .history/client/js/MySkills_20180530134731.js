@@ -5,7 +5,7 @@ import skills from "./skills.json";
 import Skill from "./Skills.js";
 
 
-const MySkillsSection = () => {
+const MySkilsSection = () => {
 	const renderSkill = (skillData) => (
 		<Skill 
 			{...skillData}
