@@ -37,7 +37,7 @@
 	},
 	{
 		"type": "dev",
-		"text": "Handlebars/Liquid"
+		"text": "Handlebars"
 	},
 	{
 		"type": "dev",
@@ -54,14 +54,6 @@
 	{
 		"type": "tool",
 		"text": "Webpack"
-	},
-	{
-		"type": "tool",
-		"text": "Jest"
-	},
-	{
-		"type": "tool",
-		"text": "Mocha"
 	},
 	{
 		"type": "be",
@@ -86,6 +78,10 @@
 	{
 		"type": "be",
 		"text": "MongoDB"
+	},
+	{
+		"type": "be",
+		"text": "RethinkDB"
 	},
 	{
 		"type": "be",

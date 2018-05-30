@@ -13,11 +13,7 @@
 	},
 	{
 		"type": "dev",
-		"text": "Typescript"
-	},
-	{
-		"type": "dev",
-		"text": "ES6+"
+		"text": "ES2015"
 	},
 	{
 		"type": "dev",
@@ -37,11 +33,15 @@
 	},
 	{
 		"type": "dev",
-		"text": "Handlebars/Liquid"
+		"text": "Handlebars"
 	},
 	{
 		"type": "dev",
 		"text": "Bootstrap"
+	},
+	{
+		"type": "tool",
+		"text": "Webpack"
 	},
 	{
 		"type": "tool",
@@ -56,20 +56,12 @@
 		"text": "Webpack"
 	},
 	{
-		"type": "tool",
-		"text": "Jest"
-	},
-	{
-		"type": "tool",
-		"text": "Mocha"
-	},
-	{
 		"type": "be",
 		"text": "HapiJS"
 	},
 	{
 		"type": "be",
-		"text": "ExpressJS"
+		"text": "PHP"
 	},
 	{
 		"type": "be",
@@ -77,11 +69,23 @@
 	},
 	{
 		"type": "be",
+		"text": "Python"
+	},
+	{
+		"type": "be",
+		"text": "FatFree"
+	},
+	{
+		"type": "be",
 		"text": "Meteor"
 	},
 	{
 		"type": "be",
-		"text": "SQL"
+		"text": "Django"
+	},
+	{
+		"type": "be",
+		"text": "MySQL"
 	},
 	{
 		"type": "be",
@@ -89,11 +93,7 @@
 	},
 	{
 		"type": "be",
-		"text": "GraphQL"
-	},
-	{
-		"type": "be",
-		"text": "Docker"
+		"text": "RethinkDB"
 	},
 	{
 		"type": "pattern",
@@ -101,11 +101,27 @@
 	},
 	{
 		"type": "pattern",
-		"text": "Functional Programming"
+		"text": "REST API"
 	},
 	{
 		"type": "pattern",
-		"text": "REST API"
+		"text": "AI"
+	},
+	{
+		"type": "pattern",
+		"text": "Responsive Dev"
+	},
+	{
+		"type": "pattern",
+		"text": "MVC"
+	},
+	{
+		"type": "pattern",
+		"text": "Single Page"
+	},
+	{
+		"type": "design",
+		"text": "Responsive Design"
 	},
 	{
 		"type": "design",
