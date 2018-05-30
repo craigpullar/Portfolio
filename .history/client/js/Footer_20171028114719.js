@@ -5,7 +5,7 @@ class Footer extends React.Component {
 	render() {
 		return (
 			<footer className="text-center">
-			© Craig Pullar 2018
+			© Craig Pullar 2017
 			</footer>
 			);
 		}

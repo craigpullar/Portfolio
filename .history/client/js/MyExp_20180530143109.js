@@ -36,7 +36,7 @@ class MyExp extends React.Component {
 							/>
 							<Experience 
 								title="3"
-								text="The number of agile teams I've worked in" 
+								text="The number of Agile Teams I've worked in" 
 								animation="fadeInUp"
 								animationDelay="0"
 							/>
