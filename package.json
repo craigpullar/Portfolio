@@ -8,7 +8,7 @@
     "prodB": "PORT=8080 node server/server.js",
     "dev": "concurrently --kill-others \"npm run dev_server\" \"npm run webpack\"",
     "dev_server": "PORT=8000 nodemon --inspect --watch server server/server.js",
-    "webpack": " node_modules/.bin/webpack --optimize-minimize  --watch --display-error-details"
+    "webpack": "node_modules/.bin/webpack --optimize-minimize  --watch --display-error-details"
   },
   "repository": {
     "type": "git",
