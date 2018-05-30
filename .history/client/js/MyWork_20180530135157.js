@@ -18,20 +18,14 @@ class MyWork extends React.Component {
 							animationDelay="0"
 						/>
 						<Site 
-							link="https://yoti.com/" 
-							class="yoti" 
-							animation="fadeInUp"
-							animationDelay="00"
-						/>
-						<Site 
 							link="https://www.homeaway.co.uk/info/halloween" 
 							class="monstermas" 
 							animation="fadeInUp"
 							animationDelay="00"
 						/>
 						<Site 
-							link="https://thefixcreative.co.uk" 
-							class="the-fix"
+							link="https://www.homeaway.com/lp/destination-races-VIP-upgrade/?" 
+							class="destination-races"
 							animation="fadeInUp"
 							animationDelay="0"
 						/>
@@ -42,11 +36,16 @@ class MyWork extends React.Component {
 							animationDelay="00"
 						/>
 						<Site 
-							link="http://hlnlegal.co.uk/" 
-							class="hln-legal" 
+							link="https://yoti.com/" 
+							class="yoti" 
 							animation="fadeInUp"
 							animationDelay="00"
 						/>
+						<Site 
+						link="http://hlnlegal.co.uk/" 
+						class="hln-legal" 
+						animation="fadeInUp"
+						animationDelay="00"/>
 					</div>
 				</div>
 			</div>

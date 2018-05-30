@@ -18,12 +18,6 @@ class MyWork extends React.Component {
 							animationDelay="0"
 						/>
 						<Site 
-							link="https://yoti.com/" 
-							class="yoti" 
-							animation="fadeInUp"
-							animationDelay="00"
-						/>
-						<Site 
 							link="https://www.homeaway.co.uk/info/halloween" 
 							class="monstermas" 
 							animation="fadeInUp"
@@ -38,6 +32,12 @@ class MyWork extends React.Component {
 						<Site 
 							link="https://www.homeaway.co.uk/lp/primary-home/" 
 							class="primary-home" 
+							animation="fadeInUp"
+							animationDelay="00"
+						/>
+						<Site 
+							link="https://yoti.com/" 
+							class="yoti" 
 							animation="fadeInUp"
 							animationDelay="00"
 						/>

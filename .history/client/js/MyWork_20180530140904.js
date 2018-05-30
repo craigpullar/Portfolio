@@ -41,6 +41,7 @@ class MyWork extends React.Component {
 							animation="fadeInUp"
 							animationDelay="00"
 						/>
+						
 						<Site 
 							link="http://hlnlegal.co.uk/" 
 							class="hln-legal" 

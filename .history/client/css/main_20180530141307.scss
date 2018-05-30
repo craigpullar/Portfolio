@@ -154,10 +154,10 @@ nav {
 				background-image:url('/images/sites/hln-legal-mobile.png');
 			}
 		}
-		&.the-fix {
-			@include bg-cover('/images/sites/the-fix-desktop.png', 50% 40%);
+		&.destination-races {
+			@include bg-cover('/images/sites/destination-races-desktop.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('/images/sites/the-fix-mobile.png');
+				background-image:url('/images/sites/destination-races-mobile.jpg');
 			}
 		}
 	}

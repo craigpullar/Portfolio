@@ -136,10 +136,10 @@ nav {
 				background-image:url('/images/sites/primary-home-mob.jpg');
 			}
 		}
-		&.yoti {
-			@include bg-cover('/images/sites/yoti_desktop.png', 50% 40%);
-			@include mobile {
-				background-image:url('/images/sites/yoti_mobile.png');
+		&.mmn {
+			@include bg-cover('/images/sites/mmn-desktop.jpg', 50% 40%);
+			@include mobile { 
+				background-image:url('/images/sites/mmn-mobile.jpg');
 			}
 		}
 		&.monstermas {
@@ -148,16 +148,16 @@ nav {
 				background-image:url('/images/sites/monstermas-mobile.jpg');
 			}
 		}
-		&.hln-legal {
-			@include bg-cover('/images/sites/hln-legal-desktop.png', 50% 40%);
+		&.picsol {
+			@include bg-cover('/images/sites/picsol-desktop.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('/images/sites/hln-legal-mobile.png');
+				background-image:url('/images/sites/picsol-mobile.jpg');
 			}
 		}
-		&.the-fix {
-			@include bg-cover('/images/sites/the-fix-desktop.png', 50% 40%);
+		&.destination-races {
+			@include bg-cover('/images/sites/destination-races-desktop.jpg', 50% 40%);
 			@include mobile { 
-				background-image:url('/images/sites/the-fix-mobile.png');
+				background-image:url('/images/sites/destination-races-mobile.jpg');
 			}
 		}
 	}
