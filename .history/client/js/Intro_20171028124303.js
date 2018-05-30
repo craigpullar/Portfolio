@@ -20,7 +20,7 @@ class Intro extends React.Component {
 			<div className="profile">
 			</div>
 			<h2 data-animation="fadeInUp">Craig Pullar</h2>
-			<p data-animation="fadeInUp">Web Developer.<br/>Based in Toronto.</p>
+			<p data-animation="fadeInUp">Designer and Full-stack Developer.<br/>Based in London.</p>
 			<a href="" className="btn cta" onClick={this.scrollToForm}>Get in touch</a>
 			</div>
 			</div>
