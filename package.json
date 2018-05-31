@@ -8,7 +8,8 @@
     "prodB": "PORT=8080 node server/server.js",
     "dev": "concurrently --kill-others \"npm run dev_server\" \"npm run webpack\"",
     "dev_server": "PORT=8000 nodemon --inspect --watch server server/server.js",
-    "webpack": "node_modules/.bin/webpack --optimize-minimize  --watch --display-error-details"
+    "webpack": "node_modules/.bin/webpack --optimize-minimize  --watch --display-error-details",
+    "lint-js": "./node_modules/.bin/eslint ."
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,7 @@
   },
   "author": "cpullar@homeaway.co.uk",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "babel-cli": "^6.24.0",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
@@ -26,6 +27,10 @@
     "babelify": "^7.3.0",
     "concurrently": "^3.5.0",
     "css-loader": "^0.28.4",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
     "file-loader": "^0.11.2",
     "grunt-babel": "^6.0.0",
     "grunt-browserify": "^5.0.0",
@@ -57,9 +62,8 @@
     "style-loader": "^0.18.2",
     "vision": "^4.1.1",
     "webpack": "^3.2.0",
-    "webpack-livereload-plugin": "^0.11.0"
-  },
-  "dependencies": {
+    "webpack-livereload-plugin": "^0.11.0",
+    "eslint": "^4.19.1",
     "nodemailer-smtp-transport": "^2.7.4"
   }
 }
