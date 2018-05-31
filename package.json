@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git@github.wvrgroup.internal:cpullar/js-full-stack-dev-env.git"
   },
-  "author": "cpullar@homeaway.co.uk",
+  "author": "craigmichaelpullar@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.24.0",
