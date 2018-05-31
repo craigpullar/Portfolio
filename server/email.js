@@ -3,21 +3,22 @@ const nodemailer = require("nodemailer");
 const smtpTransport = require('nodemailer-smtp-transport');
 var fs = require('fs');
 
-
-let email = (email_pass, from, name, message, optOut) => {
-
-let user = {
-	"name" : name,
-	"email" : from,
-	"optOut" : optOut,
+const saveUserToMailList = ({ name, email, optOut }) => {
+	const user = { name, email, optOut };
+	mail_list.push(user);
+	const mailListJson = JSON.stringify(mail_list);
+	fs.writeFile('mail_list.json', mailListJson, 'utf8', () => {});
 };
-mail_list.push(user);
-let json = JSON.stringify(mail_list);
-fs.writeFile('mail_list.json', json, 'utf8', () => {
 
-});
+const sendEmail = ({ email_pass, from, name, message, optOut }) => {
 
-	let transporter = nodemailer.createTransport(smtpTransport({
+	!optOut && saveUserToMailList({
+		name,
+		email: from,
+		optOut,
+	});
+
+	const transporter = nodemailer.createTransport(smtpTransport({
 		service: 'gmail',
 		host: 'smtp.gmail.com',
 		auth: {
@@ -25,19 +26,21 @@ fs.writeFile('mail_list.json', json, 'utf8', () => {
 			pass: email_pass,
 		}
 	}));
-	let mailOptions = {
+
+	const mailOptions = {
 		from,
 		to: 'craigmichaelpullar@gmail.com',
 		subject: `Inquiry from ${name}`,
 		text: `Email: ${from} sent the following message: ${message}`
 	};
-	return transporter.sendMail(mailOptions, function(error, info){
+
+	return transporter.sendMail(mailOptions, (error, info) => {
 		if (error) {
 			console.log(error);
 		} else {
 			console.log('Email sent: ' + info.response);
 		}
 	});
-}
+};
 
-module.exports = email;
+module.exports = sendEmail;

@@ -1,5 +1,5 @@
 
-var email = require('./email');
+const sendEmail = require('./email');
 const Hapi = require('hapi');
 var secret = require('./secret.json');
 
@@ -99,8 +99,22 @@ var routes = [
 {
     method: 'POST',
     path: '/sendEmail',
-    handler: function(request, reply) {
-        reply(email(secret.password, request.payload.email, request.payload.name, request.payload.message, request.payload.optOut));
+    handler: (request, reply) => {
+        const {
+            email: from,
+            name,
+            message,
+            optOut,
+        } = request.payload;
+        const { password: email_pass } = secret;
+        sendEmail({
+            email_pass,
+            from,
+            name,
+            message,
+            optOut,
+        })
+        reply({ status: 200 });
     }
 }
 ];
