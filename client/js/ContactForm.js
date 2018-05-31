@@ -103,25 +103,25 @@ class ContactForm extends React.Component {
 			<div className="col-sm-6 match">
 			<form action="" className={this.state.form} >
 			<input id="name" type="text" name="name" placeholder="Name"
-			onFocus={() => {this.inputFocus(event, 'name')}}
-			onBlur={() => {this.inputFocus(event, 'name')}}
-			onChange={(event)=>{this.inputChange(event,'name')}}
+			onFocus={(e) => {this.inputFocus(e, 'name')}}
+			onBlur={(e) => {this.inputFocus(e, 'name')}}
+			onChange={(e)=>{this.inputChange(e,'name')}}
 			value={this.state.name}
 			className={this.state.name_error}
 			/>
 			<input id="email" type="email" name="email" placeholder="Email" 
-			onFocus={() => {this.inputFocus(event, 'email')}}
-			onBlur={() => {this.inputFocus(event, 'email')}}
-			onChange={(event)=>{this.inputChange(event,'email')}}
+			onFocus={(e) => {this.inputFocus(e, 'email')}}
+			onBlur={(e) => {this.inputFocus(e, 'email')}}
+			onChange={(e)=>{this.inputChange(e,'email')}}
 			value={this.state.email}
 			className={this.state.email_error}
 			/>
 			<textarea name="message" id="message" cols="30" rows="8" placeholder="What can I do for you?"
-			onChange={(event)=>{this.inputChange(event,'message')}}
+			onChange={(e)=>{this.inputChange(e,'message')}}
 			value={this.state.message}
 			className={this.state.message_error}></textarea>
 			<div className="relative">
-			<input  id="optOut" type="checkbox" name="optOut" onChange={(event) => {this.optOutChange()}} /> <label>Please tick this box if you do not wish to be
+			<input  id="optOut" type="checkbox" name="optOut" onChange={(e) => {this.optOutChange()}} /> <label>Please tick this box if you do not wish to be
 			contacted with information on my products or services in the future.</label>
 			</div>
 			</form>

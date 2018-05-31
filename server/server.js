@@ -100,8 +100,7 @@ var routes = [
     method: 'POST',
     path: '/sendEmail',
     handler: function(request, reply) {
-        console.log('debug 1');
-        reply(email(secret.email_pass, request.payload.email, request.payload.name, request.payload.message, request.payload.optOut));
+        reply(email(secret.password, request.payload.email, request.payload.name, request.payload.message, request.payload.optOut));
     }
 }
 ];
