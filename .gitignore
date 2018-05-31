@@ -6,3 +6,5 @@ server/secret.json
 server/mail_list.json
 .history
 mail_list.json
+package-lock.json
+yarn.lock
