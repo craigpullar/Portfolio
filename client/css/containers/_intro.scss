@@ -1,0 +1,18 @@
+.intro {
+    &__profile {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        margin-top: -210px;
+
+        @include bg-cover('/images/profile.jpg', null);
+        @include sm-mobile {
+            width: 250px;
+            height: 250px;
+        }
+    }
+}

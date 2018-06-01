@@ -19,8 +19,8 @@ class Nav extends React.Component {
         };
         return (
           <div className="container-fluid dark-blue header text-center">
-              <nav>
-              <li className="logo">
+              <nav className="nav">
+              <li className="nav-item">
                       <img src={logo} />
                     </li>
               <NavItem text="My work" section=".work" scrollCallback={() => { defaultCallback('My Work'); }} />

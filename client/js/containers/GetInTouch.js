@@ -11,7 +11,7 @@ class GetInTouch extends React.Component {
               <div className="col-sm-12 form-cont">
                       <h2 className="text-center">Get in touch</h2>
                       <div className="col-sm-6 match text-center">
-                          <p className="middle idea">Got and idea? Want to work with me? Or even just fancy a chat? Drop me a line by filling out the form and I’ll get back to you.</p>
+                          <p className="vertical-middle idea">Got and idea? Want to work with me? Or even just fancy a chat? Drop me a line by filling out the form and I’ll get back to you.</p>
                         </div>
                       <ContactForm />
                     </div>
