@@ -1,6 +1,6 @@
 import React from 'react';
-import Experience from './Experience';
-import experienceData from '../data/experience.json';
+import Experience from '../components/Experience';
+import experienceData from '../../data/experience.json';
 
 const MyExpSection = () => {
     const renderExperience = experienceDataItem => (

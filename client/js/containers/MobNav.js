@@ -1,4 +1,4 @@
-import NavItem from './NavItem';
+import NavItem from '../components/NavItem';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';

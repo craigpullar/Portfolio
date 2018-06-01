@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ContactForm from './ContactForm';
+import ContactForm from '../components/ContactForm';
 
 
 class GetInTouch extends React.Component {
