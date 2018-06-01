@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Site from '../components/Site';
+import Site from '../components/WorkExample';
 import workData from '../../data/work.json';
 
 const MyWorkSection = () => {

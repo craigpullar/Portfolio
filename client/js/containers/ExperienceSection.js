@@ -1,5 +1,5 @@
 import React from 'react';
-import Experience from '../components/Experience';
+import Experience from '../components/ExperienceHighlight';
 import experienceData from '../../data/experience.json';
 
 const MyExpSection = () => {

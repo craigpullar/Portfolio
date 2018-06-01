@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import skills from '../../data/skills.json';
-import Skill from '../components/Skills.js';
+import Skill from '../components/Skill';
 
 
 const MySkillsSection = () => {
