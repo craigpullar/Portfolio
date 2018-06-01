@@ -8,33 +8,33 @@
 
     &:hover { border-bottom: 2px solid #fff; }
 
-    &--mobile {
-        cursor: pointer;
-        text-align: right;
-        top: 50px;
-        position: relative;
-        list-style: none;
-        padding: 12px 0;
+    @include mobile { display: none; }
+}
+.nav-item--mobile {
+    cursor: pointer;
+    text-align: right;
+    top: 50px;
+    position: relative;
+    list-style: none;
+    padding: 12px 0;
+    display: block;
+}
+.nav-item--logo {
+    cursor: default;
+    
+    &:hover { border-bottom: 2px solid transparent; }
+
+    @include mobile {
         display: block;
-    }
+        width: 100%;
+        text-align: center;
+        padding:40px 0 0px 0px;
+        margin: 0;
 
-    &.logo {
-        cursor: default;
-        
-        &:hover { border-bottom: 2px solid transparent; }
-
-        @include mobile {
+        img {
+            margin: 0 auto;
             display: block;
-			width: 100%;
-			text-align: center;
-			padding:40px 0 0px 0px;
-			margin: 0;
-
-			img {
-				margin: 0 auto;
-				display: block;
-				position: relative;
-			}
+            position: relative;
         }
     }
 }
