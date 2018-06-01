@@ -2,11 +2,11 @@
     position: absolute;
     right: 0;
     top: -110px;
-    background: #E74C3C;
+    background: #E74C3C!important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
 
     &:hover {
-        background: #c0392b;
+        background: #c0392b!important;
     }
 
     @include mobile {
