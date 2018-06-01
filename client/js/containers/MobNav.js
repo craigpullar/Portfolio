@@ -49,8 +49,8 @@ class MobNav extends React.Component {
         };
         return (
           <div>
-              <div className="mob-nav-btn" onClick={() => { this.toggleMenu(); }}>{this.state.text}</div>
-              <div className={`${this.state.class} mob-nav`}>
+                <div className="btn--mob-nav" onClick={() => { this.toggleMenu(); }}>{this.state.text}</div>
+                <div className={`${this.state.class} mob-nav`}>
                   <NavItem text="My work" section=".work" scrollCallback={() => { closeMenuCallback('My work'); }} isMobile/>
                   <NavItem text="My experience" section=".experience" scrollCallback={() => { closeMenuCallback('My exp'); }} isMobile/>
                   <NavItem text="My skills" section=".skills" scrollCallback={() => { closeMenuCallback('My skills'); }} isMobile/>
