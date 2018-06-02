@@ -6,7 +6,7 @@ import slick from 'slick-carousel';
 import 'hammerjs';
 import 'jquery-inview';
 import matchHeight from 'jquery-match-height';
-import Page from './Page';
+import Page from './containers/Page';
 import '../css/main.scss';
 
 $(() => {

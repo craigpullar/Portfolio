@@ -1,4 +1,4 @@
-import NavItem from './NavItem';
+import NavItem from '../components/NavItem';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
@@ -19,9 +19,9 @@ class Nav extends React.Component {
         };
         return (
           <div className="container-fluid dark-blue header text-center">
-              <nav>
-              <li className="logo">
-                      <img src={logo} />
+              <nav className="nav">
+              <li className="nav-item nav-item--logo">
+                      <img className='nav-item__logo-img' src={logo} />
                     </li>
               <NavItem text="My work" section=".work" scrollCallback={() => { defaultCallback('My Work'); }} />
               <NavItem text="My experience" section=".experience" scrollCallback={() => { defaultCallback('My Exp'); }} />

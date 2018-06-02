@@ -1,0 +1,42 @@
+.nav-item {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 5px 0 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin: 0 15px;
+
+    &:hover { border-bottom: 2px solid #fff; }
+
+    @include mobile { display: none; }
+}
+
+.nav-item--mobile {
+    cursor: pointer;
+    text-align: right;
+    top: 50px;
+    position: relative;
+    list-style: none;
+    padding: 12px 0;
+    display: block;
+}
+
+.nav-item--logo {
+    cursor: default;
+    
+    &:hover { border-bottom: 2px solid transparent; }
+
+    @include mobile {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 40px 0 0 0;
+        margin: 0;
+
+        .nav-item__logo-img {
+            margin: 0 auto;
+            display: block;
+            position: relative;
+        }
+    }
+}

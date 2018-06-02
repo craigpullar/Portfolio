@@ -5,7 +5,7 @@ class Skill extends React.Component {
     render() {
         return (
           <div
-              className={`${this.props.type} skill`}
+              className={`skill--${this.props.type} skill`}
               data-animation={this.props.animation}
               data-animation-delay={this.props.animationDelay}
             >

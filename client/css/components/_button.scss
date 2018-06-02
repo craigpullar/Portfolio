@@ -1,0 +1,32 @@
+.btn--get-in-touch {
+    position: absolute;
+    right: 0;
+    top: -110px;
+    background: #E74C3C!important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+
+    &:hover { background: #c0392b!important; }
+
+    @include mobile {
+        position: relative;
+        right: initial;
+        top: initial;
+    }
+}
+
+.btn--mob-nav {
+    display: none;    
+    position: fixed;
+    top: 50px;
+    right: -20px;
+    color: #fff;
+    border-radius: 100px;
+    background: #333;
+    padding: 10px;
+    padding-right: 50px;
+    z-index: 8;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    cursor: pointer;
+    
+    @include mobile { display: block; }
+}

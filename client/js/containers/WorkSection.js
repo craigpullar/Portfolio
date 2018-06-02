@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Site from './Site';
-import workData from '../data/work.json';
+import Site from '../components/WorkExample';
+import workData from '../../data/work.json';
 
 const MyWorkSection = () => {
     const renderSkill = workDataItem => (

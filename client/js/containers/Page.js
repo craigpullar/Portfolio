@@ -1,11 +1,11 @@
-import MobNav from './MobNav.js';
-import Nav from './nav.js';
-import MyWork from './MyWork.js';
-import MyExp from './MyExp.js';
-import MySkills from './MySkills.js';
-import GetInTouch from './GetInTouch.js';
-import Intro from './Intro.js';
-import Footer from './Footer.js';
+import MobNav from './MobNav';
+import Nav from './Nav';
+import MyWork from './WorkSection';
+import MyExp from './ExperienceSection';
+import MySkills from './SkillsSection';
+import GetInTouch from './GetInTouch';
+import Intro from './Intro';
+import Footer from './Footer';
 
 
 import React from 'react';
