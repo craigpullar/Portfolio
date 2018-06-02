@@ -96,9 +96,9 @@ class ContactForm extends React.Component {
   }
   render() {
     return (
-      <div>
-        <div className="col-sm-6 match">
-          <form action="" className={this.state.form} >
+      <div className='contact-form row'>
+        <div className={`${this.state.form} col-sm-6 match`}>
+          <form action="">
             <input
               id="name"
               type="text"
@@ -108,7 +108,7 @@ class ContactForm extends React.Component {
               onBlur={(e) => { this.inputFocus(e, 'name'); }}
               onChange={(e) => { this.inputChange(e, 'name'); }}
               value={this.state.name}
-              className={this.state.name_error}
+              className={`contact-form__input ${this.state.name_error}`}
             />
             <input
               id="email"
@@ -119,7 +119,7 @@ class ContactForm extends React.Component {
               onBlur={(e) => { this.inputFocus(e, 'email'); }}
               onChange={(e) => { this.inputChange(e, 'email'); }}
               value={this.state.email}
-              className={this.state.email_error}
+              className={`contact-form__input ${this.state.email_error}`}
             />
             <textarea
               name="message"
@@ -129,25 +129,26 @@ class ContactForm extends React.Component {
               placeholder="What can I do for you?"
               onChange={(e) => { this.inputChange(e, 'message'); }}
               value={this.state.message}
-              className={this.state.message_error}
+              className={`contact-form__text-area ${this.state.message_error}`}
             />
             <div className="relative">
-              <input id="optOut" type="checkbox" name="optOut" onChange={(e) => { this.optOutChange(); }} /> <label>Please tick this box if you do not wish to be
+              <input className="contact-form__input contact-form__input--opt-out" id="optOut" type="checkbox" name="optOut" onChange={(e) => { this.optOutChange(); }} />
+              <label className="contact-form__label">Please tick this box if you do not wish to be
 			contacted with information on my products or services in the future.
                                                                                                              </label>
             </div>
           </form>
         </div>
-        <a href="" className={`${this.state.form} btn cta`} onClick={(e) => { this.submitForm(e); }}>Send <img src={send} /></a>
-        <div className={`${this.state.thanks} thanks col-sm-12`}>
-          <p className="text-center">
+        <a href="" className={`${this.state.form} btn contact-form__submit-button`} onClick={(e) => { this.submitForm(e); }}>
+          Send <img className="contact-form__send-icon" src={send} />
+        </a>
+        <div className={`${this.state.thanks} contact-form__thanks col-xs-12 col-sm-6 text-center`}>
+          <p className="contact-form__thanks-content vertical-middle">
             <img src={smile} /><br />
             <br />Thank you. <br />I'll be in touch soon.
           </p>
         </div>
       </div>
-
-
     );
   }
 }

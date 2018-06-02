@@ -1,0 +1,102 @@
+.contact-form__input,
+.contact-form__text-area {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #CCCCCC;
+    font-size: 2.2rem;
+    margin: 5px 0;
+    padding: 10px;
+    outline: none!important;
+
+    @include placeholder {
+        color: #CCCCCC;
+        font-size: 1.5rem;
+        transition: all .2s ease-in;
+    }
+}
+
+.contact-form__input--opt-out{
+    display: block;
+    position: absolute!important;
+    left: 0;
+    top: 50%;
+    margin-top: -5px;
+    z-index: 2;
+    width: auto!important;
+
+    @include mobile {
+        left: 0;
+        width: auto!important;
+    }
+
+    @include tablet {
+        left: 0;
+        width: auto!important;
+    }
+}
+
+.contact-form__text-area { resize: none; }
+
+.contact-form__input {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 20px;
+    transition: all .2s ease-in;
+
+    &.focus {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+        @include placeholder {
+            color: #CCCCCC;
+            font-size: 2.2rem;
+        }
+    }
+}
+
+.contact-form__label {
+    text-align: left!important;
+    display: block;
+    width: 100%;
+    padding-left: 30px;
+    position: relative;
+    margin: 5px 0px;
+}
+
+.contact-form__submit-button {
+    transition: all 0.2s ease-in;
+    float: none;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    &:hover {
+        margin-left:10px;
+        text-decoration:none;
+    }
+
+    @include mobile { width:100%; }
+}
+
+.contact-form__send-icon {
+    height: 26px;
+    position: relative;
+    top: -3px;
+    margin-left: 10px;
+    transition: all 0.2s ease-in;
+}
+
+.contact-form__submit-button:hover .contact-form__send-icon { margin-left: 20px; }
+
+.contact-form__thanks {
+    padding: 50px 0;
+    height: 100%;
+
+    @include mobile { height: 360px; }
+}
+
+.contact-form__thanks-content {
+    left: 0;
+    right: 0;
+}
