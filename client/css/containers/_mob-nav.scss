@@ -1,5 +1,5 @@
 .mob-nav {
-    display: none;
+	display: none;
 	width: 300px;
 	box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 	position: fixed;
@@ -11,8 +11,8 @@
 	padding: 80px 20px 0 20px;
 	transform: translateX(-300px);
 	transition: all .2s ease-in;
-    
-    &.open { transform:translateX(0); }
-    
+
+	&.open { transform:translateX(0); }
+
 	@include mobile { display: block; }
 }
