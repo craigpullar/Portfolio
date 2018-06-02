@@ -60,11 +60,11 @@
     width: 100%;
     padding-left: 30px;
     position: relative;
-    margin: 5px 0px;
+    margin: 5px 0;
 }
 
 .contact-form__submit-button {
-    transition: all 0.2s ease-in;
+    transition: all .2s ease-in;
     float: none;
     display: inline-block;
     position: relative;
@@ -72,8 +72,8 @@
     transform: translateX(-50%);
     
     &:hover {
-        margin-left:10px;
-        text-decoration:none;
+        margin-left: 10px;
+        text-decoration: none;
     }
 
     @include mobile { width:100%; }
@@ -84,7 +84,7 @@
     position: relative;
     top: -3px;
     margin-left: 10px;
-    transition: all 0.2s ease-in;
+    transition: all .2s ease-in;
 }
 
 .contact-form__submit-button:hover .contact-form__send-icon { margin-left: 20px; }
