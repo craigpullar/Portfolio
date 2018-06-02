@@ -9,7 +9,7 @@ class Intro extends React.Component {
             eventCategory: 'CTA - Get in Touch',
             eventAction: 'click',
         });
-        document.querySelector('.form').scrollIntoView();
+        document.querySelector('.contact-form').scrollIntoView();
     }
     render() {
         return (

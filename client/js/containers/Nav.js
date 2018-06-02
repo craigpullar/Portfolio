@@ -26,7 +26,7 @@ class Nav extends React.Component {
               <NavItem text="My work" section=".work" scrollCallback={() => { defaultCallback('My Work'); }} />
               <NavItem text="My experience" section=".experience" scrollCallback={() => { defaultCallback('My Exp'); }} />
               <NavItem text="My skills" section=".skills" scrollCallback={() => { defaultCallback('My Skills'); }} />
-              <NavItem text="Get in touch" section=".form" scrollCallback={() => { getInTouchCallback('Get in'); }} />
+              <NavItem text="Get in touch" section=".contact-form" scrollCallback={() => { getInTouchCallback('Get in'); }} />
                 </nav>
             </div>
         );

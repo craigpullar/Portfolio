@@ -54,7 +54,7 @@ class MobNav extends React.Component {
                   <NavItem text="My work" section=".work" scrollCallback={() => { closeMenuCallback('My work'); }} isMobile/>
                   <NavItem text="My experience" section=".experience" scrollCallback={() => { closeMenuCallback('My exp'); }} isMobile/>
                   <NavItem text="My skills" section=".skills" scrollCallback={() => { closeMenuCallback('My skills'); }} isMobile/>
-                  <NavItem text="Get in touch" section=".form" scrollCallback={() => { getInTouchCallback('Get in touch'); }} isMobile/>
+                  <NavItem text="Get in touch" section=".contact-form" scrollCallback={() => { getInTouchCallback('Get in touch'); }} isMobile/>
                 </div>
             </div>
         );
