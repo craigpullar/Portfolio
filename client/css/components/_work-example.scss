@@ -4,55 +4,55 @@
     @include tablet { width: 50%; }
     
     @include mobile { width: 100%; }
-    
-    &__anchor { outline:none; }
+}
 
-	&__view {
-		background :#D8D8D8;
-		border: 1px solid #ccc;
-		width: 300px;
-		height: 300px;
-		margin: 0 auto;
-        cursor: pointer;
-        
-		@include sm-mobile {
-			width: 250px;
-			height: 250px;
-		}
+.work-example__anchor { outline:none; }
 
-		&.vacation-equation {
-            @include bg-cover('/images/sites/vacation-equation-desktop.jpg', 50% 40%);
-            
-			@include mobile { background-image:url('/images/sites/vacation-equation-mobile.jpg'); }
-        }
-        
-		&.primary-home {
-            @include bg-cover('/images/sites/primary-home.jpg', 50% 40%);
-            
-			@include mobile { background-image:url('/images/sites/primary-home-mob.jpg'); }
-        }
-        
-		&.yoti {
-			@include bg-cover('/images/sites/yoti_desktop.png', 50% 40%);
-			@include mobile { background-image:url('/images/sites/yoti_mobile.png'); }
-        }
-        
-		&.monstermas {
-            @include bg-cover('/images/sites/monstermas-desktop.jpg', 50% 40%);
-            
-			@include mobile { background-image:url('/images/sites/monstermas-mobile.jpg'); }
-        }
-        
-		&.hln-legal {
-            @include bg-cover('/images/sites/hln-legal-desktop.png', 50% 40%);
-            
-			@include mobile { background-image:url('/images/sites/hln-legal-mobile.png'); }
-        }
-        
-		&.the-fix {
-            @include bg-cover('/images/sites/the-fix-desktop.png', 50% 40%);
-            
-			@include mobile { background-image:url('/images/sites/the-fix-mobile.png'); }
-		}
+.work-example__view {
+	background :#D8D8D8;
+	border: 1px solid #ccc;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	cursor: pointer;
+	
+	@include sm-mobile {
+		width: 250px;
+		height: 250px;
 	}
+}
+
+.work-example__view--vacation-equation {
+	@include bg-cover('/images/sites/vacation-equation-desktop.jpg', 50% 40%);
+	
+	@include mobile { background-image:url('/images/sites/vacation-equation-mobile.jpg'); }
+}
+
+.work-example__view--primary-home {
+	@include bg-cover('/images/sites/primary-home.jpg', 50% 40%);
+	
+	@include mobile { background-image:url('/images/sites/primary-home-mob.jpg'); }
+}
+
+.work-example__view--yoti {
+	@include bg-cover('/images/sites/yoti_desktop.png', 50% 40%);
+	@include mobile { background-image:url('/images/sites/yoti_mobile.png'); }
+}
+
+.work-example__view--monstermas {
+	@include bg-cover('/images/sites/monstermas-desktop.jpg', 50% 40%);
+	
+	@include mobile { background-image:url('/images/sites/monstermas-mobile.jpg'); }
+}
+
+.work-example__view--hln-legal {
+	@include bg-cover('/images/sites/hln-legal-desktop.png', 50% 40%);
+	
+	@include mobile { background-image:url('/images/sites/hln-legal-mobile.png'); }
+}
+
+.work-example__view--the-fix {
+	@include bg-cover('/images/sites/the-fix-desktop.png', 50% 40%);
+	
+	@include mobile { background-image:url('/images/sites/the-fix-mobile.png'); }
 }

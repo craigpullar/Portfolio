@@ -1,15 +1,15 @@
 .experience-highlight {
     margin-top: 30px;
     outline: none;
+}
 
-    &__title {
-        font-size: 6rem;
-        color: #fff;
-        font-weight: 700;
-        overflow: visible;
-        -webkit-text-stroke: 3px #9B59B6;
-        -webkit-text-fill-color: #ffffff;
-        background: -moz-linear-gradient(left,  #fff,  #9B59B6);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#9B59B6'); 
-    }
+.experience-highlight__title {
+    font-size: 6rem;
+    color: #fff;
+    font-weight: 700;
+    overflow: visible;
+    -webkit-text-stroke: 3px #9B59B6;
+    -webkit-text-fill-color: #ffffff;
+    background: -moz-linear-gradient(left,  #fff,  #9B59B6);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#9B59B6'); 
 }

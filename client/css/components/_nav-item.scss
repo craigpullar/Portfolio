@@ -10,6 +10,7 @@
 
     @include mobile { display: none; }
 }
+
 .nav-item--mobile {
     cursor: pointer;
     text-align: right;
@@ -19,6 +20,7 @@
     padding: 12px 0;
     display: block;
 }
+
 .nav-item--logo {
     cursor: default;
     
@@ -31,7 +33,7 @@
         padding:40px 0 0px 0px;
         margin: 0;
 
-        img {
+        .nav-item__logo-img {
             margin: 0 auto;
             display: block;
             position: relative;

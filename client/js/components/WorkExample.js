@@ -14,7 +14,7 @@ class Site extends React.Component {
     render() {
         return (
           <div
-              className="col-sm-4 work-example"
+              className="work-example col-sm-4"
               data-animation={this.props.animation}
               data-animation-delay={this.props.animationDelay}
             >
@@ -23,7 +23,7 @@ class Site extends React.Component {
                 target="_blank"
                 onClick={(e) => { this.handleClick(e); }}
             >
-                  <div className={`${this.props.class} work-example__view`} />
+                  <div className={`work-example__view work-example__view--${this.props.class}`} />
                 </a>
             </div>
         );

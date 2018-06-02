@@ -6,7 +6,7 @@ class Experience extends React.Component {
         return (
 
           <div
-              className="col-sm-4 experience-highlight"
+              className="experience-highlight col-sm-4"
               data-animation={this.props.animation}
               data-animation-delay={this.props.animationDelay}
             >

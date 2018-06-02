@@ -17,9 +17,10 @@ class NavItem extends React.Component {
         callback();
     }
     render() {
+        const isMobileClass = this.props.isMobile ? 'nav-item--mobile' : '';
         return (
           <li
-            className={`nav-item ${this.props.isMobile ? 'nav-item--mobile' : ''}`}
+            className={`nav-item ${isMobileClass}`}
             onClick={e => this.click_event(e)}
             >
               {this.props.text}
