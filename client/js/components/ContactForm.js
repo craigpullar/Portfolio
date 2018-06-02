@@ -49,16 +49,12 @@ class ContactForm extends React.Component {
           form: 'hidden',
           thanks: '',
         });
-        $('.form .col-sm-6').hide();
-        $('.form .cta').hide();
       })
       .fail((jqXhr) => {
         self.setState({
           form: 'hidden',
           thanks: '',
         });
-        $('.form .col-sm-6').hide();
-        $('.form .cta').hide();
       });
   }
   optOutChange() {
