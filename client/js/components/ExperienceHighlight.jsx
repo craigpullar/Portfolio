@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ExperienceHighlight = ({
-    animation, animationDelay, title,
+    animation, animationDelay, title, text,
 }) => (
     <div
         className="experience-highlight col-sm-4 match"
