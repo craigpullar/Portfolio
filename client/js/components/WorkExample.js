@@ -13,17 +13,18 @@ class Site extends React.Component {
     }
     render() {
         return (
-          <div
-              className="work-example col-sm-4"
-              data-animation={this.props.animation}
-              data-animation-delay={this.props.animationDelay}
+            <div
+                className="work-example col-sm-4"
+                data-animation={this.props.animation}
+                data-animation-delay={this.props.animationDelay}
             >
-              <a className="work-example__anchor"
-                href={this.props.link}
-                target="_blank"
-                onClick={(e) => { this.handleClick(e); }}
-            >
-                  <div className={`work-example__view work-example__view--${this.props.class}`} />
+                <a
+                    className="work-example__anchor"
+                    href={this.props.link}
+                    target="_blank"
+                    onClick={(e) => { this.handleClick(e); }}
+                >
+                    <div className={`work-example__view work-example__view--${this.props.class}`} />
                 </a>
             </div>
         );

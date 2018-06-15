@@ -26,7 +26,7 @@ const config = [{
         rules: [
 
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
                 loaders: ['babel-loader'],
                 include: `${__dirname}/client/js`,
@@ -43,6 +43,9 @@ const config = [{
                 include: `${__dirname}/client/css`,
             },
         ],
+    },
+    resolve: {
+        extensions: ['.js', '.jsx']
     },
 }];
 

@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.5.1",
+  "version": "1.5.3",
   "description": "My Portfolio",
   "main": "index.html",
   "scripts": {
@@ -9,7 +9,7 @@
     "dev": "concurrently --kill-others \"npm run dev_server\" \"npm run webpack\"",
     "dev_server": "PORT=8000 nodemon --inspect --watch server server/server.js",
     "webpack": "node_modules/.bin/webpack --optimize-minimize  --watch --display-error-details",
-    "lint-js": "./node_modules/.bin/eslint ."
+    "lint-js": "./node_modules/.bin/eslint --ext js,jsx ."
   },
   "repository": {
     "type": "git",
