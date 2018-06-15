@@ -18,15 +18,15 @@ class Nav extends React.Component {
             });
         };
         return (
-          <div className="container-fluid dark-blue header text-center">
-              <nav className="nav">
-              <li className="nav-item nav-item--logo">
-                      <img className='nav-item__logo-img' src={logo} />
+            <div className="container-fluid dark-blue header text-center">
+                <nav className="nav">
+                    <li className="nav-item nav-item--logo">
+                        <img className="nav-item__logo-img" src={logo} />
                     </li>
-              <NavItem text="My work" section=".work" scrollCallback={() => { defaultCallback('My Work'); }} />
-              <NavItem text="My experience" section=".experience" scrollCallback={() => { defaultCallback('My Exp'); }} />
-              <NavItem text="My skills" section=".skills" scrollCallback={() => { defaultCallback('My Skills'); }} />
-              <NavItem text="Get in touch" section=".contact-form" scrollCallback={() => { getInTouchCallback('Get in'); }} />
+                    <NavItem text="My work" section=".work" scrollCallback={() => { defaultCallback('My Work'); }} />
+                    <NavItem text="My experience" section=".experience" scrollCallback={() => { defaultCallback('My Exp'); }} />
+                    <NavItem text="My skills" section=".skills" scrollCallback={() => { defaultCallback('My Skills'); }} />
+                    <NavItem text="Get in touch" section=".contact-form" scrollCallback={() => { getInTouchCallback('Get in'); }} />
                 </nav>
             </div>
         );

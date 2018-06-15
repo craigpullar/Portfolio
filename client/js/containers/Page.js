@@ -15,15 +15,15 @@ import ReactDOM from 'react-dom';
 class Page extends React.Component {
     render() {
         return (
-          <div>
-              <MobNav />
-              <Nav />
-              <Intro />
-              <MyWork />
-              <MyExp />
-              <MySkills />
-              <GetInTouch />
-              <Footer />
+            <div>
+                <MobNav />
+                <Nav />
+                <Intro />
+                <MyWork />
+                <MyExp />
+                <MySkills />
+                <GetInTouch />
+                <Footer />
             </div>
         );
     }

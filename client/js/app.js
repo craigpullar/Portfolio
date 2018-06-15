@@ -10,52 +10,52 @@ import Page from './containers/Page';
 import '../css/main.scss';
 
 $(() => {
-  /* Init MatchHeight */
-  $('.match').matchHeight();
+    /* Init MatchHeight */
+    $('.match').matchHeight();
 
-  /* Init HammerJS */
-  const menuSwipe = new Hammer(document.body, {
-    inputClass: Hammer.SUPPORT_POINTER_EVENTS ? Hammer.PointerEventInput : Hammer.TouchInput,
-  });
-  menuSwipe.on('swiperight', (e) => {
-    if (!$('.mob-nav').hasClass('open')) { $('.mob-nav-btn').click(); }
-  });
-  menuSwipe.on('swipeleft', (e) => {
-    if ($('.mob-nav').hasClass('open')) { $('.mob-nav-btn').click(); }
-  });
-
-
-  /* Init Animations */
-  if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    $('*[data-animation]').each(function () {
-      $(this).css('opacity', 0);
-      $(this).on('inview', function (event, isInView) {
-        if (isInView) {
-          $(this).delay($(this).attr('data-animation-delay')).queue(function (next) {
-            $(this).addClass(`animated ${$(this).attr('data-animation')}`);
-            next();
-          });
-        }
-      });
+    /* Init HammerJS */
+    const menuSwipe = new Hammer(document.body, {
+        inputClass: Hammer.SUPPORT_POINTER_EVENTS ? Hammer.PointerEventInput : Hammer.TouchInput,
     });
-  } else {
+    menuSwipe.on('swiperight', (e) => {
+        if (!$('.mob-nav').hasClass('open')) { $('.mob-nav-btn').click(); }
+    });
+    menuSwipe.on('swipeleft', (e) => {
+        if ($('.mob-nav').hasClass('open')) { $('.mob-nav-btn').click(); }
+    });
+
+
+    /* Init Animations */
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        $('*[data-animation]').each(function () {
+            $(this).css('opacity', 0);
+            $(this).on('inview', function (event, isInView) {
+                if (isInView) {
+                    $(this).delay($(this).attr('data-animation-delay')).queue(function (next) {
+                        $(this).addClass(`animated ${$(this).attr('data-animation')}`);
+                        next();
+                    });
+                }
+            });
+        });
+    } else {
     /* Init Slick */
-    $('.slick').slick({
-      dots: true,
-      infinite: true,
-      speed: 500,
-      cssEase: 'linear',
-      mobileFirst: true,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      responsive: [
-        {
-          breakpoint: 700,
-          settings: 'unslick',
-        },
-      ],
-    });
-  }
+        $('.slick').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            cssEase: 'linear',
+            mobileFirst: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 700,
+                    settings: 'unslick',
+                },
+            ],
+        });
+    }
 });
 
 
