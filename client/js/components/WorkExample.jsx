@@ -1,16 +1,16 @@
 import React from 'react';
 
-const Site = ({
-    class, link, animation, animationDelay
+const WorkExample = ({
+    className, link, animation, animationDelay
 }) => {
     const handleClick = (event) => {
         event.preventDefault();
 
         ga('send', 'event', {
-            eventCategory: `Site - ${class}`,
+            eventCategory: `Site - ${className}`,
             eventAction: 'click',
         });
-        
+
         const win = window.open(link, '_blank');
         win.focus();
     };
@@ -27,10 +27,10 @@ const Site = ({
                     target="_blank"
                     onClick={handleClick}
                 >
-                    <div className={`work-example__view work-example__view--${class}`} />
+                    <div className={`work-example__view work-example__view--${className}`} />
                 </a>
             </div>
     );
 };
 
-export default Site;
+export default WorkExample;
