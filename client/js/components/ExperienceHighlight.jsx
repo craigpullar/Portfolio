@@ -16,5 +16,4 @@ const ExperienceHighlight = ({
     </div>
 );
 
-
 export default ExperienceHighlight;
