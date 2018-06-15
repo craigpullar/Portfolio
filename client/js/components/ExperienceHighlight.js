@@ -5,14 +5,14 @@ class Experience extends React.Component {
     render() {
         return (
 
-          <div
-              className="experience-highlight col-sm-4"
-              data-animation={this.props.animation}
-              data-animation-delay={this.props.animationDelay}
+            <div
+                className="experience-highlight col-sm-4 match"
+                data-animation={this.props.animation}
+                data-animation-delay={this.props.animationDelay}
             >
-              <span className="experience-highlight__title">{this.props.title}</span>
-              <br />
-              <p>{this.props.text}</p>
+                <span className="experience-highlight__title">{this.props.title}</span>
+                <br />
+                <p>{this.props.text}</p>
             </div>
 
         );
