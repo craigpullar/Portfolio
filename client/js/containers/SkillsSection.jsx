@@ -16,7 +16,7 @@ const SkillsSection = () => {
             <div className="row">
                 <div className="col-sm-12">
                     <h2 data-animation="fadeInUp">
-						My Skills
+                        My Skills
                     </h2>
                     {skills.map(renderSkill)}
                 </div>

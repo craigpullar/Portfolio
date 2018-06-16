@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WorkExample = ({
-    className, link, animation, animationDelay
+    className, link, animation, animationDelay,
 }) => {
     const handleClick = (event) => {
         event.preventDefault();
@@ -17,19 +17,19 @@ const WorkExample = ({
 
     return (
         <div
-                className="work-example col-sm-4"
-                data-animation={animation}
-                data-animation-delay={animationDelay}
+            className="work-example col-sm-4"
+            data-animation={animation}
+            data-animation-delay={animationDelay}
+        >
+            <a
+                className="work-example__anchor"
+                href={link}
+                target="_blank"
+                onClick={handleClick}
             >
-                <a
-                    className="work-example__anchor"
-                    href={link}
-                    target="_blank"
-                    onClick={handleClick}
-                >
-                    <div className={`work-example__view work-example__view--${className}`} />
-                </a>
-            </div>
+                <div className={`work-example__view work-example__view--${className}`} />
+            </a>
+        </div>
     );
 };
 

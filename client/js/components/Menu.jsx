@@ -4,24 +4,26 @@ import menuData from '../../data/menu.json';
 
 const Menu = ({
     isMobile = false,
-    toggleMenu = () => {}
+    toggleMenu = () => {},
 }) => {
-    const scrollCallback = function(){
+    function scrollCallback() {
         toggleMenu();
 
         ga('send', 'event', {
             eventCategory: `Nav - ${this.section}`,
             eventAction: 'click',
         });
-    };
+    }
 
-    const renderNavItem = navItemData => (
-        <NavItem
-            {...navItemData}
-            scrollCallback={scrollCallback.bind(navItemData)}
-            isMobile={isMobile}
-        />
-    );
+    const renderNavItem = (navItemData) => {
+        const navItemProps = {
+            scrollCallbackBound: scrollCallback.bind(navItemData),
+            isMobile,
+            ...navItemData,
+        };
+
+        return <NavItem {...navItemProps} />;
+    };
 
     return (
         <span>

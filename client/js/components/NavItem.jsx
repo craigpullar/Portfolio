@@ -15,6 +15,8 @@ const NavItem = ({
         <li
             className={`nav-item ${isMobileClass}`}
             onClick={scrollToSection}
+            onKeyPress={scrollToSection}
+            role="presentation"
         >
             {text}
         </li>

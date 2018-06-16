@@ -10,7 +10,9 @@ const GetInTouch = () => (
                 </h2>
                 <div className="col-sm-6 match text-center">
                     <p className="vertical-middle">
-                        Got and idea? Want to work with me? Or even just fancy a chat? Drop me a line by filling out the form and I’ll get back to you.
+                        Got and idea? Want to work with me? Or even
+                         just fancy a chat? Drop me a line by filling
+                         out the form and I’ll get back to you.
                     </p>
                 </div>
                 <ContactForm />

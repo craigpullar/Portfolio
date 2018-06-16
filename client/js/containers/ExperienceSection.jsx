@@ -23,6 +23,6 @@ const ExperienceSection = () => {
             </div>
         </div>
     );
-}
+};
 
 export default ExperienceSection;

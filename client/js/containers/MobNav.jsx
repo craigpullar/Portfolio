@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import Menu from '../components/Menu';
 
 class MobNav extends React.Component {
@@ -16,7 +15,7 @@ class MobNav extends React.Component {
                 text: 'Close',
                 class: 'open',
                 open: true,
-            }
+            },
         };
 
         this.state = this.menuStates.closed;
@@ -25,17 +24,10 @@ class MobNav extends React.Component {
     }
 
     toggleMenu() {
-        !this.state.open
-        ? this.openMenu()
-        : this.closeMenu();
-    }
-
-    openMenu() {
-        this.setState(this.menuStates.open);
-    }
-    
-    closeMenu() {
-        this.setState(this.menuStates.closed);
+        const menuStateToApply = (!this.state.open
+            ? this.menuStates.open
+            : this.menuStates.closed);
+        this.setState(menuStateToApply);
     }
 
     render() {
@@ -44,6 +36,9 @@ class MobNav extends React.Component {
                 <div
                     className="btn--mob-nav"
                     onClick={this.toggleMenu}
+                    onKeyPress={this.toggleMenu}
+                    role="button"
+                    tabIndex="0"
                 >
                     {this.state.text}
                 </div>

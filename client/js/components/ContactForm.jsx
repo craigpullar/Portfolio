@@ -64,8 +64,8 @@ class ContactForm extends React.Component {
     }
 
     optOutChange() {
-        this.setState(prevState => ({ 
-            optOut: !prevState.optOut
+        this.setState(prevState => ({
+            optOut: !prevState.optOut,
         }));
     }
 
@@ -73,7 +73,7 @@ class ContactForm extends React.Component {
         const {
             name,
             email,
-            message
+            message,
         } = this.state;
         const regex = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 

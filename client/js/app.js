@@ -9,7 +9,7 @@ import matchHeight from 'jquery-match-height';
 import Page from './containers/Page';
 import '../css/main.scss';
 
-$(function(){
+$(() => {
     /* Init MatchHeight */
     $('.match').matchHeight();
 
@@ -28,11 +28,11 @@ $(function(){
 
 
     /* Init Animations */
-    const isMobileUserAgent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    const isMobileUserAgent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     if (!isMobileUserAgent) {
         $('*[data-animation]').each(function () {
             $(this).css('opacity', 0);
-            
+
             $(this).on('inview', function (event, isInView) {
                 if (isInView) {
                     $(this).delay($(this).attr('data-animation-delay')).queue(function (next) {

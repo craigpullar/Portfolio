@@ -10,7 +10,7 @@ const WorkSection = () => {
             animationDelay="0"
         />
     );
-    
+
     return (
         <div className="container-fluid light-grey work text-center">
             <div className="row">

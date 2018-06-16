@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import Menu from '../components/Menu';
 
 const logo = '../images/logo.svg';
@@ -11,6 +10,7 @@ const Nav = () => (
                 <img
                     className="nav-item__logo-img"
                     src={logo}
+                    alt="Craig Pular logo"
                 />
             </li>
             <Menu />

@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 
 const Intro = () => {
     const scrollToForm = (event) => {
@@ -25,13 +24,12 @@ const Intro = () => {
                         Front-End Web Developer.<br />
                         Based in Toronto.
                     </p>
-                    <a
-                        href=""
+                    <button
                         className="btn btn--get-in-touch"
                         onClick={scrollToForm}
                     >
                         Get in touch
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
