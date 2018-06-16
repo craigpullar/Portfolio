@@ -6,11 +6,20 @@ class MobNav extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            text: 'Menu',
-            class: '',
-            open: false,
+        this.menuStates = {
+            closed: {
+                text: 'Menu',
+                class: '',
+                open: false,
+            },
+            open: {
+                text: 'Close',
+                class: 'open',
+                open: true,
+            }
         };
+
+        this.state = this.menuStates.closed;
 
         this.toggleMenu = this.toggleMenu.bind(this);
     }
@@ -22,19 +31,11 @@ class MobNav extends React.Component {
     }
 
     openMenu() {
-        this.setState({
-            text: 'Close',
-            class: 'open',
-            open: true,
-        });
+        this.setState(this.menuStates.open);
     }
     
     closeMenu() {
-        this.setState({
-            text: 'Menu',
-            class: '',
-            open: false,
-        });
+        this.setState(this.menuStates.closed);
     }
 
     render() {

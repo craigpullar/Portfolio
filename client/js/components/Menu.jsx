@@ -24,9 +24,9 @@ const Menu = ({
     );
 
     return (
-        <div>
+        <span>
             {menuData.map(renderNavItem)}
-        </div>
+        </span>
     );
 };
 
