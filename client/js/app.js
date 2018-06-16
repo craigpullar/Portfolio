@@ -9,7 +9,7 @@ import matchHeight from 'jquery-match-height';
 import Page from './containers/Page';
 import '../css/main.scss';
 
-$(() => {
+$(function(){
     /* Init MatchHeight */
     $('.match').matchHeight();
 
@@ -17,18 +17,22 @@ $(() => {
     const menuSwipe = new Hammer(document.body, {
         inputClass: Hammer.SUPPORT_POINTER_EVENTS ? Hammer.PointerEventInput : Hammer.TouchInput,
     });
+
+    const isMobNavOpen = () => $('.mob-nav').hasClass('open');
     menuSwipe.on('swiperight', (e) => {
-        if (!$('.mob-nav').hasClass('open')) { $('.mob-nav-btn').click(); }
+        !isMobNavOpen() && $('.mob-nav-btn').click();
     });
     menuSwipe.on('swipeleft', (e) => {
-        if ($('.mob-nav').hasClass('open')) { $('.mob-nav-btn').click(); }
+        isMobNavOpen() && $('.mob-nav-btn').click();
     });
 
 
     /* Init Animations */
-    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    const isMobileUserAgent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    if (!isMobileUserAgent) {
         $('*[data-animation]').each(function () {
             $(this).css('opacity', 0);
+            
             $(this).on('inview', function (event, isInView) {
                 if (isInView) {
                     $(this).delay($(this).attr('data-animation-delay')).queue(function (next) {
@@ -60,4 +64,3 @@ $(() => {
 
 
 ReactDOM.render(<Page />, document.getElementById('app'));
-
