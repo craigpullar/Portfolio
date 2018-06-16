@@ -17,7 +17,7 @@ const Menu = ({
 
     const renderNavItem = (navItemData) => {
         const navItemProps = {
-            scrollCallbackBound: scrollCallback.bind(navItemData),
+            scrollCallback: scrollCallback.bind(navItemData),
             isMobile,
             ...navItemData,
         };
