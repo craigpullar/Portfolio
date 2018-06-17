@@ -4,7 +4,6 @@ import $ from 'jquery';
 const send = '../images/send.svg';
 const smile = '../images/smile.svg';
 
-
 class ContactForm extends React.Component {
     constructor(props) {
         super(props);
@@ -20,12 +19,16 @@ class ContactForm extends React.Component {
             optOut: false,
         };
     }
+
     inputFocus(event, id) {
         if (!$(`#${id}`).val().length) { $(`#${id}`).toggleClass('focus'); }
     }
+
     submitForm(e) {
         e.preventDefault();
+
         if (!this.validate()) return false;
+
         self = this;
 
 
@@ -35,10 +38,12 @@ class ContactForm extends React.Component {
             message: this.state.message,
             optOut: this.state.optOut,
         };
+
         ga('send', 'event', {
             eventCategory: 'Contact form submit',
             eventAction: 'submit',
         });
+
         $.ajax({
             type: 'POST',
             url: '/sendEmail',
@@ -57,13 +62,19 @@ class ContactForm extends React.Component {
                 });
             });
     }
+
     optOutChange() {
-        this.setState({ optOut: !this.setState.optOut });
+        this.setState(prevState => ({
+            optOut: !prevState.optOut,
+        }));
     }
+
     validate() {
-        const name = this.state.name;
-        const email = this.state.email;
-        const message = this.state.message;
+        const {
+            name,
+            email,
+            message,
+        } = this.state;
         const regex = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
         let pass = true;

@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.5.3",
+  "version": "1.6.0",
   "description": "My Portfolio",
   "main": "index.html",
   "scripts": {
@@ -65,5 +65,10 @@
     "webpack-livereload-plugin": "^0.11.0",
     "eslint": "^4.19.1",
     "nodemailer-smtp-transport": "^2.7.4"
+  },
+  "devDependencies": {
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
   }
 }

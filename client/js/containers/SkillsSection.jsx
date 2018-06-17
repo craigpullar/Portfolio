@@ -1,11 +1,8 @@
-// import Skill from "./Skill";
 import React from 'react';
-import ReactDOM from 'react-dom';
 import skills from '../../data/skills.json';
 import Skill from '../components/Skill';
 
-
-const MySkillsSection = () => {
+const SkillsSection = () => {
     const renderSkill = skillData => (
         <Skill
             {...skillData}
@@ -19,7 +16,7 @@ const MySkillsSection = () => {
             <div className="row">
                 <div className="col-sm-12">
                     <h2 data-animation="fadeInUp">
-						My Skills
+                        My Skills
                     </h2>
                     {skills.map(renderSkill)}
                 </div>
@@ -28,4 +25,4 @@ const MySkillsSection = () => {
     );
 };
 
-export default MySkillsSection;
+export default SkillsSection;

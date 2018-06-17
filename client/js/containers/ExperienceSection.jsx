@@ -2,8 +2,8 @@ import React from 'react';
 import Experience from '../components/ExperienceHighlight';
 import experienceData from '../../data/experience.json';
 
-const MyExpSection = () => {
-    const renderExperience = experienceDataItem => (
+const ExperienceSection = () => {
+    const renderExperienceHighlight = experienceDataItem => (
         <Experience
             {...experienceDataItem}
             animation="fadeInUp"
@@ -17,7 +17,7 @@ const MyExpSection = () => {
                 <div className="col-sm-12">
                     <h2 data-animation="fadeInUp">My Experience</h2>
                     <div className="slick">
-                        {experienceData.map(renderExperience)}
+                        {experienceData.map(renderExperienceHighlight)}
                     </div>
                 </div>
             </div>
@@ -25,4 +25,4 @@ const MyExpSection = () => {
     );
 };
 
-export default MyExpSection;
+export default ExperienceSection;

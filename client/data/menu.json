@@ -1,0 +1,18 @@
+[
+    {
+        "text": "My work",
+        "section": ".work"
+    },
+    {
+        "text": "My experience",
+        "section": ".experience"
+    },
+    {
+        "text": "My skills",
+        "section": ".skills"
+    },
+    {
+        "text": "Get in touch",
+        "section": ".contact-form"
+    }
+]

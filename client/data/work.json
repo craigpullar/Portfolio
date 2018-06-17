@@ -1,26 +1,26 @@
 [
     {
         "link": "https://www.homeaway.com/lp/vacation-equation/",
-        "class": "vacation-equation"
+        "className": "vacation-equation"
     },
     {
         "link": "https://yoti.com/",
-        "class": "yoti"
+        "className": "yoti"
     },
     {
         "link": "https://www.homeaway.co.uk/info/halloween",
-        "class": "monstermas"
+        "className": "monstermas"
     },
     {
         "link": "https://thefixcreative.co.uk",
-        "class": "the-fix"
+        "className": "the-fix"
     },
     {
         "link": "https://www.homeaway.co.uk/lp/primary-home/",
-        "class": "primary-home"
+        "className": "primary-home"
     },
     {
         "link": "http://hlnlegal.co.uk/",
-        "class": "hln-legal"
+        "className": "hln-legal"
     }
 ]
