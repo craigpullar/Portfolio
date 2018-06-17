@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const NavItem = ({
     section, scrollCallback, text, isMobile,
@@ -21,6 +22,18 @@ const NavItem = ({
             {text}
         </li>
     );
+};
+
+NavItem.propTypes = {
+    section: PropTypes.string.isRequired,
+    scrollCallback: PropTypes.func,
+    text: PropTypes.string.isRequired,
+    isMobile: PropTypes.bool,
+};
+
+NavItem.defaultProps = {
+    scrollCallback: () => {},
+    isMobile: false,
 };
 
 export default NavItem;

@@ -1,10 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NavItem from '../components/NavItem';
 import menuData from '../../data/menu.json';
 
 const Menu = ({
-    isMobile = false,
-    toggleMenu = () => {},
+    isMobile, toggleMenu,
 }) => {
     function scrollCallback() {
         toggleMenu();
@@ -30,6 +30,16 @@ const Menu = ({
             {menuData.map(renderNavItem)}
         </span>
     );
+};
+
+Menu.defaultProps = {
+    isMobile: false,
+    toggleMenu: () => {},
+};
+
+Menu.propTypes = {
+    isMobile: PropTypes.bool,
+    toggleMenu: PropTypes.func,
 };
 
 export default Menu;

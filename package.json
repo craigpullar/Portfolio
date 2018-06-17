@@ -27,6 +27,7 @@
     "babelify": "^7.3.0",
     "concurrently": "^3.5.0",
     "css-loader": "^0.28.4",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
@@ -53,7 +54,10 @@
     "jquery-inview": "^1.1.2",
     "jquery-match-height": "^0.7.2",
     "nodemailer": "^4.6.5",
+    "nodemailer-smtp-transport": "^2.7.4",
     "nodemon": "^1.12.1",
+    "npm": "^6.1.0",
+    "prop-types": "^15.6.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "rethinkdb": "^2.3.3",
@@ -62,9 +66,7 @@
     "style-loader": "^0.18.2",
     "vision": "^4.1.1",
     "webpack": "^3.2.0",
-    "webpack-livereload-plugin": "^0.11.0",
-    "eslint": "^4.19.1",
-    "nodemailer-smtp-transport": "^2.7.4"
+    "webpack-livereload-plugin": "^0.11.0"
   },
   "devDependencies": {
     "babel-plugin-syntax-object-rest-spread": "^6.13.0",

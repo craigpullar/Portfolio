@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const WorkExample = ({
     className, link, animation, animationDelay,
@@ -31,6 +32,13 @@ const WorkExample = ({
             </a>
         </div>
     );
+};
+
+WorkExample.propTypes = {
+    className: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    animation: PropTypes.string.isRequired,
+    animationDelay: PropTypes.string.isRequired,
 };
 
 export default WorkExample;

@@ -2,9 +2,8 @@ import React from 'react';
 import Menu from '../components/Menu';
 
 class MobNav extends React.Component {
-    constructor(props) {
-        super(props);
-
+    constructor() {
+        super();
         this.menuStates = {
             closed: {
                 text: 'Menu',
