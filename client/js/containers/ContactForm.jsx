@@ -21,11 +21,7 @@ class ContactForm extends React.Component {
         this.state = {
             isFormVisible: true,
             isThanksVisible: false,
-            errors: {
-                [FIELD_KEYS.name]: false,
-                [FIELD_KEYS.email]: false,
-                [FIELD_KEYS.message]: false,
-            },
+            errors: { ...this.defaultFocusState },
             values: {
                 [FIELD_KEYS.name]: '',
                 [FIELD_KEYS.email]: '',
@@ -41,6 +37,7 @@ class ContactForm extends React.Component {
         this.handleFormSuccess = this.handleFormSuccess.bind(this);
         this.submitForm = this.submitForm.bind(this);
         this.handleOptOutChange = this.handleOptOutChange.bind(this);
+        this.addErrorToInput = this.addErrorToInput.bind(this);
     }
 
     handleInputFocus(event) {
@@ -66,8 +63,9 @@ class ContactForm extends React.Component {
         formSubmit({
             data: this.state.values,
             FIELD_KEYS,
-        }).then(this.handleFormSuccess)
-            .catch(this.handleFormError);
+        })
+        .then(this.handleFormSuccess)
+        .catch(this.handleFormError);
     }
 
     handleFormSuccess() {
@@ -94,19 +92,31 @@ class ContactForm extends React.Component {
         }));
     }
 
+    addErrorToInput({ fieldKey }) {
+        this.setState(prevState => ({
+            errors: {
+                ...prevState.errors,
+                [fieldKey]: true,
+            },
+        }));
+    }
+
     validate() {
         const {
             name, message, email,
         } = FIELD_KEYS;
 
         return [name, email, message].reduce(
-            (accum, fieldKey) =>
-                accum && validateField({
-                    form: this,
+            (accum, fieldKey) => {
+                const isValid = validateField({
+                    inputValue: this.state.values[fieldKey],
                     fieldKey,
-                })
-            , true,
-        );
+                });
+
+                !isValid && this.addErrorToInput({ fieldKey });
+
+                return isValid && accum;
+            }, true);
     }
 
     handleInputChange(event) {
@@ -127,9 +137,7 @@ class ContactForm extends React.Component {
 
     render() {
         const {
-            name,
-            email,
-            message,
+            name, email, message,
         } = FIELD_KEYS;
 
         const getFocusClassForKey = key => (this.state.focus[key]

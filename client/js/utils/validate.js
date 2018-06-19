@@ -11,21 +11,10 @@ export const validateEmail = ({ inputValue }) => {
 
 export const validateText = ({ inputValue }) => isPresent({ inputValue });
 
-export const validateField = ({ form, fieldKey }) => {
-    const inputValue = form.state.values[fieldKey];
-
+export const validateField = ({fieldKey, inputValue }) => {
     const isValidEmail = (fieldKey === FIELD_KEYS.email)
         ? validateEmail({ inputValue })
         : true;
 
-    const isValid = isValidEmail && validateText({ inputValue });
-
-    !isValid && form.setState(prevState => ({
-        errors: {
-            ...prevState.errors,
-            [fieldKey]: true,
-        },
-    }));
-
-    return isValid;
+    return isValidEmail && validateText({ inputValue });
 };

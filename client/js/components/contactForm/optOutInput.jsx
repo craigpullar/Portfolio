@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const OptOutInput = ({
-    handleChange,
-}) => (
+const OptOutInput = ({ handleChange }) => (
     <div className="relative">
         <input
             className="contact-form__input contact-form__input--opt-out"
