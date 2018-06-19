@@ -1,12 +1,11 @@
 import React from 'react';
+import GAEvent from '../utils/googleAnalytics';
 
 const Intro = () => {
     const scrollToForm = (event) => {
         event.preventDefault();
-
-        ga('send', 'event', {
+        GAEvent.click({
             eventCategory: 'CTA - Get in Touch',
-            eventAction: 'click',
         });
 
         document.querySelector('.contact-form').scrollIntoView();
