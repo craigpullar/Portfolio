@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import GAEvent from '../utils/googleAnalytics';
 
 const WorkExample = ({
     className, link, animation, animationDelay,
@@ -7,9 +8,8 @@ const WorkExample = ({
     const handleClick = (event) => {
         event.preventDefault();
 
-        ga('send', 'event', {
+        GAEvent.click({
             eventCategory: `Site - ${className}`,
-            eventAction: 'click',
         });
 
         const win = window.open(link, '_blank');

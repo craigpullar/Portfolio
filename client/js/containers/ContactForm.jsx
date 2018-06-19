@@ -1,12 +1,13 @@
 import React from 'react';
-import FIELD_KEYS from '../entities/formFieldKeys.json';
-import { validateField } from '../utils/validate';
-import { formSubmit } from '../utils/formSubmit';
 import TextField from '../components/contactForm/TextField';
 import MessageTextArea from '../components/contactForm/MessageTextArea';
 import OptOutInput from '../components/contactForm/optOutInput';
 import SubmitButton from '../components/contactForm/SubmitButton';
 import ThanksMessage from '../components/contactForm/ThanksMessage';
+import FIELD_KEYS from '../entities/formFieldKeys.json';
+import { validateField } from '../utils/validate';
+import formSubmit from '../utils/formSubmit';
+import GAEvent from '../utils/googleAnalytics';
 
 class ContactForm extends React.Component {
     constructor(props) {
@@ -55,9 +56,8 @@ class ContactForm extends React.Component {
 
         if (!this.validate()) return false;
 
-        ga('send', 'event', {
+        GAEvent.submit({
             eventCategory: 'Contact form submit',
-            eventAction: 'submit',
         });
 
         formSubmit({

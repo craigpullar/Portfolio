@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NavItem from '../components/NavItem';
 import menuData from '../../data/menu.json';
+import GAEvent from '../utils/googleAnalytics';
 
 const Menu = ({
     isMobile, toggleMenu,
 }) => {
     function scrollCallback() {
-        toggleMenu();
-
-        ga('send', 'event', {
-            eventCategory: `Nav - ${this.section}`,
-            eventAction: 'click',
+        GAEvent.click({
+            eventCategory:  `Nav - ${this.section}`,
         });
+
+        toggleMenu();   
     }
 
     const renderNavItem = (navItemData) => {
