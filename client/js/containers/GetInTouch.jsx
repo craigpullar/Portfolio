@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactForm from '../components/ContactForm';
+import ContactForm from './ContactForm';
 
 const GetInTouch = () => (
     <div className="get-in-touch container-fluid">

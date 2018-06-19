@@ -1,7 +1,1 @@
-[
-	{
-		"name" : "Joe Blogs",
-		"email" : "Joe@blogs.com",
-		"optOut" : false
-	}
-]
+[{"name":"Joe Blogs","email":"Joe@blogs.com","optOut":false},{"name":"test","email":"optout@false.com","optOut":false}]
