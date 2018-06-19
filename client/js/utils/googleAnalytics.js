@@ -11,9 +11,10 @@ const GAEventCurried = ({ eventAction }) =>
         });
     };
 
-Object.entries(GA_EVENT_TYPES).forEach(([key, eventAction]) => {
-    GA_EVENT_TYPES[key] = GAEventCurried({ eventAction })
-});
+const convertEventTypeToFunction = ([ eventType, eventAction ]) => {
+    GA_EVENT_TYPES[eventType] = GAEventCurried({ eventAction });
+};
 
+Object.entries(GA_EVENT_TYPES).forEach(convertEventTypeToFunction);
 
 export default GA_EVENT_TYPES;
