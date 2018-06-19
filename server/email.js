@@ -7,7 +7,7 @@ const saveUserToMailList = ({ name, email, optOut }) => {
     const user = { name, email, optOut };
     mail_list.push(user);
     const mailListJson = JSON.stringify(mail_list);
-    fs.writeFile('mail_list.json', mailListJson, 'utf8', () => {});
+    fs.writeFile('./server/mail_list.json', mailListJson, 'utf8', () => {});
 };
 
 const sendEmail = ({

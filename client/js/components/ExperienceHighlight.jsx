@@ -17,7 +17,7 @@ const ExperienceHighlight = ({
     </div>
 );
 
-ExperienceHighlight.PropTypes = {
+ExperienceHighlight.propTypes = {
     animation: PropTypes.string.isRequired,
     animationDelay: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
